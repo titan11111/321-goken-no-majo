@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "name": "simultaneous-move-attack",
+      "pass": true
+    },
+    {
+      "name": "drag-direction-change",
+      "pass": true
+    },
+    {
+      "name": "independent-finger-release",
+      "pass": true
+    },
+    {
+      "name": "touchcancel-all-release",
+      "pass": true
+    },
+    {
+      "name": "mute-persists",
+      "pass": true
+    },
+    {
+      "name": "file-url-offline-play",
+      "pass": true
+    },
+    {
+      "name": "no-storage-no-audio-play",
+      "pass": true
+    }
+  ],
+  "metrics": {
+    "samples": 21,
+    "mean": 3.009523809521592,
+    "p95": 4,
+    "max": 4.100000000093132
+  },
+  "fps": 60,
+  "zoom": 1,
+  "note": "Input metric is event-handler to simulation processing on desktop Chromium emulating a phone; not touch-to-photon or physical iPhone latency."
+}

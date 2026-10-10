@@ -1,0 +1,185 @@
+{
+  "date": "2026-10-10T12:33:54.646Z",
+  "results": [
+    {
+      "name": "start",
+      "pass": true,
+      "evidence": "running"
+    },
+    {
+      "name": "six-distinct-moves",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "depth-miss",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "near-hit",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "shield-break",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "reflect-magic",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "dash-invulnerability",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "damage-after-invulnerability",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "burst-clears-magic",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "boss-second-phase",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "wave-advances",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "loss-and-retry",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "boss-win-ending",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "short-touch-not-lost",
+      "pass": true
+    },
+    {
+      "name": "hold-punch-chain",
+      "pass": true
+    },
+    {
+      "name": "hold-kick-chain",
+      "pass": true
+    },
+    {
+      "name": "keyboard-movement",
+      "pass": true,
+      "evidence": {
+        "x0": 294.39459915611815,
+        "x1": 338.8112658227843
+      }
+    },
+    {
+      "name": "pointercancel-release",
+      "pass": true
+    },
+    {
+      "name": "keyboard-touch-source-ownership",
+      "pass": true
+    },
+    {
+      "name": "pause-stops-world",
+      "pass": true
+    },
+    {
+      "name": "blur-pause-and-clear",
+      "pass": true
+    },
+    {
+      "name": "runtime-errors",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "layout-390x844",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "ratio": 0.25,
+        "bad": [],
+        "scale": 1,
+        "start": true
+      }
+    },
+    {
+      "name": "repeated-tap-no-zoom",
+      "pass": true
+    },
+    {
+      "name": "layout-375x667",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "ratio": 0.25,
+        "bad": [],
+        "scale": 1,
+        "start": true
+      }
+    },
+    {
+      "name": "layout-320x568",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "ratio": 0.25,
+        "bad": [],
+        "scale": 1,
+        "start": true
+      }
+    },
+    {
+      "name": "layout-430x932",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "ratio": 0.25,
+        "bad": [],
+        "scale": 1,
+        "start": true
+      }
+    },
+    {
+      "name": "layout-844x390",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "ratio": 0.25,
+        "bad": [],
+        "scale": 1,
+        "start": true
+      }
+    },
+    {
+      "name": "webkit-start-combo-audio",
+      "pass": true,
+      "evidence": {
+        "mode": "play",
+        "moves": [
+          "左ジャブ",
+          "右ストレート",
+          "両手パンチ"
+        ],
+        "audio": "running",
+        "errors": [],
+        "fps": 51
+      }
+    }
+  ]
+}
