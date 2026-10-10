@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#101716"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content="魔力ゼロ。拳で、運命を砕け。剛拳の魔城 — 連撃ベルトスクロールアクション。">
+<title>剛拳の魔城 — IRON / HEX</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101716'/%3E%3Cpath d='M20 10h24v14l8 8-8 22H20L12 32l8-8z' fill='%23edb66a'/%3E%3C/svg%3E">
+<style>/* COMMON_CSS */
+/* GAME_CSS */</style></head>
+<body>
+<main id="game-shell">
+<section id="game-stage" aria-label="剛拳の魔城 ゲーム画面">
+<div id="screen-wrap"><canvas id="screen" aria-label="魔法をかわし、拳で魔城を攻略するアクションゲーム"></canvas></div>
+<header id="hud" class="hidden">
+ <div class="vital"><div class="hudline"><b>GARUD <small>魔力 0</small></b><span id="hpText">120</span></div><div class="healthbar"><i id="hpFill"></i></div><div class="ragebar"><i id="rageFill"></i></div><small id="rageLabel">闘気 / 震撃</small></div>
+ <div class="stageinfo"><span id="areaText">01 / 城外橋</span><b id="scoreText">000000</b></div>
+</header>
+<div id="utility"><button id="mute" aria-label="音を切り替え" title="音を切り替え">♪</button><button id="pause" aria-label="一時停止" title="一時停止">Ⅱ</button></div>
+<div id="bossHud" class="hidden"><span>魔王 ヴェルグ <small id="bossPhase">THE LAST SPELL</small></span><div><i id="bossFill"></i></div></div>
+<div id="combo" class="hidden"><b id="comboCount">0</b><span>HITS</span><small id="moveName"></small></div>
+<div id="notice" aria-live="polite"></div>
+<div id="title" class="overlay title">
+ <div class="edition">TITANS ARCADE <span> / </span> 321</div>
+ <div class="title-copy"><div class="eyebrow">魔 力 ゼ ロ の 反 逆 者</div><h1>剛拳<span>の</span>魔城</h1><div class="english">IRON <i>/</i> HEX</div><p>魔法がすべての世界で、<br>最後に残ったのは、この拳だった。</p></div>
+ <div class="title-actions"><button id="start" class="primary">魔城へ挑む <span>→</span></button><div class="subactions"><button id="practice">鍛錬場</button><button id="guide">遊び方</button><button id="settingsTitle">設定</button></div><div class="bottom-caption">BELT-SCROLL ACTION <span>拳 × 魔法</span></div></div>
+</div>
+<div id="modal" class="overlay hidden"><div class="modal-card"><div class="eyebrow" id="modalLabel">CAMP / 休息</div><h2 id="modalTitle">ひと息、つこう。</h2><div id="modalBody"></div><div id="modalButtons"></div></div></div>
+<div id="chapter" class="hidden"><small id="chapterNum"></small><strong id="chapterName"></strong><span id="chapterSub"></span></div>
+<div id="trainingLabel" class="hidden">鍛錬場 <span>体力無限・全技を試せます</span></div>
+</section>
+<nav id="control-deck" class="fc-control-deck" aria-label="ゲーム操作">
+<div class="deck-left"><div id="stick" role="button" tabindex="0" aria-label="8方向移動"><div class="stick-ring"></div><span class="n">▲</span><span class="s">▼</span><span class="w">◀</span><span class="e">▶</span><div id="nub"></div></div><span class="deck-caption">MOVE <small>WASD / ↑↓←→</small></span></div>
+<div class="deck-center"><span class="deck-brand">IRON <i>/</i> HEX</span><span id="hint">押し続けて、3連撃</span><span id="perf">READY</span></div>
+<div class="deck-right"><div class="minor-actions"><button id="burst" data-action="burst" class="action utility-action" aria-label="震撃 Uキー">震撃<small>U</small></button><button id="dash" data-action="dash" class="action utility-action" aria-label="回避 スペースキー">回避<small>SPACE</small></button></div><div class="main-actions"><button id="kick" data-action="kick" class="action kick" aria-label="キック Kキー">脚<small>K / X</small></button><button id="punch" data-action="punch" class="action punch" aria-label="パンチ Jキー">拳<small>J / Z</small></button></div></div>
+</nav></main>
+<script>/* GAME_JS */</script>
+</body></html>
