@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-10T23:23:39.805Z",
+  "results": [
+    {
+      "name": "chromium-immediate",
+      "pass": true
+    },
+    {
+      "name": "chromium-cancel",
+      "pass": true
+    },
+    {
+      "name": "chromium-hitstop",
+      "pass": true
+    },
+    {
+      "name": "chromium-buffer",
+      "pass": true
+    },
+    {
+      "name": "chromium-pressed",
+      "pass": true
+    },
+    {
+      "name": "webkit-immediate",
+      "pass": true
+    },
+    {
+      "name": "webkit-cancel",
+      "pass": true
+    },
+    {
+      "name": "webkit-hitstop",
+      "pass": true
+    },
+    {
+      "name": "webkit-buffer",
+      "pass": true
+    },
+    {
+      "name": "webkit-pressed",
+      "pass": true
+    }
+  ]
+}

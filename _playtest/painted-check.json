@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-10T23:24:04.891Z",
+  "results": [
+    {
+      "name": "chromium-painted-assets-decoded",
+      "pass": true,
+      "evidence": {
+        "ready": {
+          "hero": true,
+          "enemies": true,
+          "scenes": true
+        },
+        "failed": [],
+        "heroPose": {
+          "frame": 1,
+          "shift": 0,
+          "bob": 0.5392984649470216
+        }
+      }
+    },
+    {
+      "name": "chromium-six-authored-contact-poses",
+      "pass": true,
+      "evidence": [
+        {
+          "kind": "punch",
+          "idx": 0,
+          "pose": 7
+        },
+        {
+          "kind": "punch",
+          "idx": 1,
+          "pose": 10
+        },
+        {
+          "kind": "punch",
+          "idx": 2,
+          "pose": 13
+        },
+        {
+          "kind": "kick",
+          "idx": 0,
+          "pose": 16
+        },
+        {
+          "kind": "kick",
+          "idx": 1,
+          "pose": 19
+        },
+        {
+          "kind": "kick",
+          "idx": 2,
+          "pose": 24
+        }
+      ]
+    },
+    {
+      "name": "chromium-sustained-render",
+      "pass": true,
+      "evidence": {
+        "fps": 60,
+        "errors": []
+      }
+    },
+    {
+      "name": "chromium-standalone-art",
+      "pass": true
+    },
+    {
+      "name": "webkit-painted-assets-decoded",
+      "pass": true,
+      "evidence": {
+        "ready": {
+          "hero": true,
+          "enemies": true,
+          "scenes": true
+        },
+        "failed": [],
+        "heroPose": {
+          "frame": 1,
+          "shift": 0,
+          "bob": 0.3519354980191149
+        }
+      }
+    },
+    {
+      "name": "webkit-six-authored-contact-poses",
+      "pass": true,
+      "evidence": [
+        {
+          "kind": "punch",
+          "idx": 0,
+          "pose": 7
+        },
+        {
+          "kind": "punch",
+          "idx": 1,
+          "pose": 10
+        },
+        {
+          "kind": "punch",
+          "idx": 2,
+          "pose": 13
+        },
+        {
+          "kind": "kick",
+          "idx": 0,
+          "pose": 16
+        },
+        {
+          "kind": "kick",
+          "idx": 1,
+          "pose": 19
+        },
+        {
+          "kind": "kick",
+          "idx": 2,
+          "pose": 24
+        }
+      ]
+    },
+    {
+      "name": "webkit-sustained-render",
+      "pass": true,
+      "evidence": {
+        "fps": 57,
+        "errors": []
+      }
+    },
+    {
+      "name": "webkit-standalone-art",
+      "pass": true
+    }
+  ]
+}
