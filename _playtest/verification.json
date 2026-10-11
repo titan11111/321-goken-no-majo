@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-11T00:38:57.819Z",
+  "date": "2026-10-11T00:49:52.343Z",
   "results": [
     {
       "name": "start",
@@ -33,6 +33,11 @@
     },
     {
       "name": "reflect-timing-grades",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "enemy-chant-and-interrupt",
       "pass": true,
       "evidence": ""
     },
@@ -92,8 +97,8 @@
       "name": "keyboard-movement",
       "pass": true,
       "evidence": {
-        "x0": 295.066659746289,
-        "x1": 329.1934773496348
+        "x0": 294.39459915611815,
+        "x1": 342.0780544400307
       }
     },
     {
