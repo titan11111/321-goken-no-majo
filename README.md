@@ -36,3 +36,6 @@
 - src/art-baked.json：画像の切り出し範囲（起動時の計測を廃止し、ビルド時に固定。再生成は _playtest/bake-art.mjs）
 
 編集はsrc/、成果物はindex.html。親リポジトリの共通CSSがある環境で `python3 build.py` を実行すると再生成できます。
+
+## エンディング
+魔王を倒すと夜明けの演出（約30秒、左上の SKIP / Esc で飛ばせる）→ 結果画面。

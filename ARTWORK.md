@@ -44,3 +44,10 @@ Bottom left: huge forbidden arcane stone gate beneath gothic pointed arches, int
 Bottom right: demon king's throne chamber at the heart of a volcanic citadel, black basalt throne centered at rear with a tall ruby velvet backrest, brass trim and skull ornaments, obsidian pillars, lava glowing far behind the edges, deep crimson banners, dark broad basalt fighting platform floor, ornate worn crimson carpet down center. Restrained orange volcanic reflected lighting, detailed cracks, no explosions.
 Every quadrant must be a complete attractive scene edge to edge with continuous level floor, no cropped interface. Detail suitable for a released game, not a flat schematic.
 ```
+
+## dawn.webp（エンディング背景・2026-10-11）
+組み込み image_gen。1280×720 → WebP 品質84（約200KB）。人物なし。道の位置はコード側 `END_PATH` に正規化座標で持つ（絵を差し替えるなら道の座標を取り直す）。
+
+```text
+Cinematic ending backdrop ... SUNRISE after the demon king's defeat: broken dark castle far left, huge golden sun breaking over the horizon with god rays, warm village rooftops and a stone bridge in the middle distance, cherry petals, a clear empty weathered stone road filling the bottom 40%. NO characters, NO text, NO UI.
+```
