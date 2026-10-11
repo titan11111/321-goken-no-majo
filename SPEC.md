@@ -7,7 +7,7 @@
 - 最新APIの名称だけを性能保証にしない。2026-10-10にSafari 27.0 / Pointer Events仕様を調査。機能検出付きraw入力・120Hz固定更新・フレーム計測を導入。軽量2DはCanvas2Dで描画し、WebGPU必須にはしない。
 
 ## 操作／設定（最初に実装）
-- 左：8方向パッド。右：跳 / 拳 / 脚 / 回避 / 震撃。マルチタッチ、pointer capture、pointercancel、lost capture、blur時解放。
+- ファミコン配置（2026-10-11）：左＝十字キー（8方向デジタル・全速）、中央＝SELECT=回避 / START=震撃、右＝B=キック・A=パンチ、A/Bの上に跳（ジャンプ）。横画面は 跳・B・A を1列。マルチタッチ、pointer capture、pointercancel、lost capture、blur時解放。
 - PC：WASD/矢印移動、J/Z=拳、K/X=脚、I/V=ジャンプ、Space/L=回避、U/C=震撃、Esc/P=ポーズ、M=音。
 - 長押し連撃と短タップの両方。回避は攻撃の予備動作からキャンセル可能。
 - ミュート、一時停止、操作ガイド、左利き、軽い演出、難易度（旅人/挑戦）、操作感度、画質。

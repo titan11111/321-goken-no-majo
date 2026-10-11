@@ -401,6 +401,48 @@ body.danger .healthbar i{background:linear-gradient(180deg,#ff9a7a,#dd3a2b 55%,#
 #hud,#trainingLabel,#bossHud,#hud-stats{text-shadow:0 1px 2px rgba(0,0,0,.95),0 0 6px rgba(0,0,0,.8)}
 #trainingLabel{background:linear-gradient(90deg,rgba(6,8,8,.55),transparent);padding:3px 8px 3px 6px;border-radius:2px}
 @media (orientation:landscape) and (max-height:520px){#notice{bottom:auto;top:calc(env(safe-area-inset-top) + 56px);left:50%;transform:translateX(-50%);max-width:50vw}}
+
+/* ================= Famicom controller layout =================
+   十字キー(左) / SELECT・START(中央) / B・A(右)。B=キック、A=パンチ、SELECT=回避、START=震撃、跳=ジャンプ(A/Bの上) */
+#control-deck{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#control-deck .deck-left{order:0}#control-deck .deck-center{order:1;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-width:0}#control-deck .deck-right{order:2;gap:0}
+body.left-handed #control-deck .deck-left{order:2}body.left-handed #control-deck .deck-right{order:0}body.left-handed #control-deck .deck-center{order:1}
+.deck-info{display:none}
+/* D-pad: black plastic cross on a dark plate */
+#control-deck #stick{--dp:clamp(86px,min(34vw,15.5dvh),150px);width:var(--dp);height:var(--dp);min-width:0;min-height:0;border-radius:50%;background:radial-gradient(circle,rgba(0,0,0,.45) 0 64%,transparent 66%);box-shadow:none;transform:perspective(260px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .07s ease-out}
+#control-deck #stick.active{box-shadow:none;background:radial-gradient(circle,rgba(0,0,0,.45) 0 64%,rgba(var(--accent-rgb),.22) 66%,transparent 72%)}
+.cross-wrap{position:absolute;inset:0;pointer-events:none;filter:drop-shadow(0 5px 5px rgba(0,0,0,.65))}
+.cross-rim,.cross{position:absolute;pointer-events:none;clip-path:polygon(33% 0,67% 0,67% 33%,100% 33%,100% 67%,67% 67%,67% 100%,33% 100%,33% 67%,0 67%,0 33%,33% 33%)}
+.cross-rim{inset:0;background:var(--rim)}.cross{inset:3%;background:linear-gradient(160deg,#34373a,#0d0e0f 70%)}
+#control-deck #stick span{font-size:calc(var(--dp)*.1);color:rgba(var(--accent-rgb),.5);z-index:2}
+#control-deck #stick .n{top:9%;left:50%;transform:translateX(-50%)}#control-deck #stick .s{bottom:9%;left:50%;transform:translateX(-50%);top:auto}#control-deck #stick .w{left:9%;top:50%;transform:translateY(-50%)}#control-deck #stick .e{right:9%;top:50%;transform:translateY(-50%);left:auto}
+#stick[data-y="-1"] .n,#stick[data-y="1"] .s,#stick[data-x="-1"] .w,#stick[data-x="1"] .e{color:#fff;text-shadow:0 0 9px var(--accent),0 0 3px var(--accent)}
+#control-deck #nub{width:27%;height:27%;left:36.5%;top:36.5%;z-index:1;background:radial-gradient(circle at 50% 38%,#08090a,#1c1e20 70%);border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 2px 3px #000,0 1px 0 rgba(255,255,255,.12)}
+#control-deck #stick.active #nub{border-color:rgba(var(--accent-rgb),.6)}
+/* SELECT / START pills */
+.fc-pills{display:flex;flex-direction:column;gap:10px;align-items:center}
+#control-deck .pill{width:clamp(62px,18.5vw,78px);min-width:62px;height:50px;min-height:50px;border-radius:25px;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font:700 15px/1 "Yu Mincho","Hiragino Mincho ProN",serif;color:var(--accent2);background:linear-gradient(#4a4b4d,#1c1d1e 55%,#101112);border:1px solid #000;box-shadow:0 0 0 1.5px var(--rim),0 4px 0 #040505,0 8px 12px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.2)}
+#control-deck .pill small{font:700 8px ui-monospace,monospace;letter-spacing:1.5px;color:var(--accent2);opacity:.6;margin:0}
+#control-deck .pill.pressed{transform:translateY(3px);box-shadow:0 0 0 1.5px var(--accent),0 1px 0 #040505,0 0 14px rgba(var(--accent-rgb),.5),inset 0 1px 0 rgba(255,255,255,.2);filter:brightness(1.35)}
+#control-deck #burst::after{left:12px;right:auto;bottom:6px;height:4px;width:calc((100% - 24px)*var(--rage,0)/100);border-radius:2px}
+body.rage #control-deck #burst{border-color:#000;box-shadow:0 0 0 1.5px var(--accent),0 4px 0 #040505,0 0 18px rgba(var(--accent-rgb),.6),inset 0 1px 0 rgba(255,255,255,.2)}
+/* B / A: Famicom red; jump sits above and between */
+#control-deck .main-actions{display:grid;grid-template-columns:auto auto;gap:6px 12px;align-items:center;justify-items:center}
+#control-deck .main-actions .jump{grid-column:1/-1;grid-row:1;width:max(48px,calc(var(--btn)*.95));height:max(48px,calc(var(--btn)*.95));font-size:calc(var(--btn)*.4)}
+#control-deck .main-actions .kick{grid-column:1;grid-row:2}#control-deck .main-actions .punch{grid-column:2;grid-row:2}
+#control-deck .kick,#control-deck .punch{width:max(52px,calc(var(--btn)*1.2));height:max(52px,calc(var(--btn)*1.2));--glow:255,70,50;font:900 calc(var(--btn)*.5) "Helvetica Neue",Arial,sans-serif;color:#fff1ea;text-shadow:0 2px 0 rgba(90,0,0,.7);background:radial-gradient(circle at 34% 24%,#ff9e90,#d82a20 50%,#6a0c09 100%)}
+#control-deck .kick small,#control-deck .punch small,#control-deck .jump small{font:700 calc(var(--btn)*.15) "Yu Gothic",sans-serif;letter-spacing:0;opacity:.85;margin-top:1px;text-shadow:none}
+#control-deck .kick small,#control-deck .punch small{color:#ffd9d0}
+/* landscape: dpad | SELECT START + hint | jump B A in one row */
+@media(max-height:500px) and (orientation:landscape){
+ #control-deck{padding:6px 28px}
+ #control-deck .deck-center{gap:3px}#control-deck .fc-pills{flex-direction:row;gap:12px}.deck-info{display:flex;flex-direction:column;align-items:center}.deck-info .deck-brand,.deck-info #perf{display:none}.deck-info #hint{font-size:10px}
+ #control-deck #stick{--dp:clamp(70px,34dvh,92px)}
+ #control-deck .pill{width:78px}
+ #control-deck .main-actions{display:flex;gap:12px}
+ #control-deck .main-actions .jump{width:max(48px,calc(var(--btn)*.95));height:max(48px,calc(var(--btn)*.95))}
+ #control-deck .kick,#control-deck .punch{width:max(52px,var(--btn));height:max(52px,var(--btn))}
+}
 </style></head>
 <body data-area="0">
 <main id="game-shell">
@@ -425,9 +467,9 @@ body.danger .healthbar i{background:linear-gradient(180deg,#ff9a7a,#dd3a2b 55%,#
 </section>
 <nav id="control-deck" class="fc-control-deck" aria-label="ゲーム操作">
 <div id="deck-fx" aria-hidden="true"></div>
-<div class="deck-left"><div id="stick" role="button" tabindex="0" aria-label="8方向移動"><div class="stick-ring"></div><span class="n">▲</span><span class="s">▼</span><span class="w">◀</span><span class="e">▶</span><div id="nub"></div></div><span class="deck-caption">MOVE <small>WASD / ↑↓←→</small></span></div>
-<div class="deck-center"><span class="deck-brand">IRON <i>/</i> HEX</span><span id="hint">押し続けて、3連撃</span><span id="perf">READY</span></div>
-<div class="deck-right"><div class="minor-actions"><button id="burst" data-action="burst" class="action utility-action" aria-label="震撃 Uキー">震撃<small>U</small></button><button id="dash" data-action="dash" class="action utility-action" aria-label="回避 スペースキー">回避<small>SPACE</small></button></div><div class="main-actions"><button id="jump" data-action="jump" class="action jump" aria-label="ジャンプ Iキー">跳<small>I / V</small></button><button id="kick" data-action="kick" class="action kick" aria-label="キック Kキー">脚<small>K / X</small></button><button id="punch" data-action="punch" class="action punch" aria-label="パンチ Jキー">拳<small>J / Z</small></button></div></div>
+<div class="deck-left"><div id="stick" class="dpad" role="button" tabindex="0" aria-label="十字キー（8方向移動）"><div class="cross-wrap"><i class="cross-rim"></i><i class="cross"></i></div><span class="n">▲</span><span class="s">▼</span><span class="w">◀</span><span class="e">▶</span><div id="nub"></div></div><span class="deck-caption">十字キー <small>WASD / ↑↓←→</small></span></div>
+<div class="deck-center"><div class="fc-pills"><button id="dash" data-action="dash" class="action utility-action pill" aria-label="回避 スペースキー">回避<small>SELECT</small></button><button id="burst" data-action="burst" class="action utility-action pill" aria-label="震撃 Uキー">震撃<small>START</small></button></div><div class="deck-info"><span class="deck-brand">IRON <i>/</i> HEX</span><span id="hint">押し続けて、3連撃</span><span id="perf">READY</span></div></div>
+<div class="deck-right"><div class="main-actions"><button id="jump" data-action="jump" class="action jump" aria-label="ジャンプ Iキー">跳<small>JUMP</small></button><button id="kick" data-action="kick" class="action kick" aria-label="キック Bボタン Kキー">B<small>キック</small></button><button id="punch" data-action="punch" class="action punch" aria-label="パンチ Aボタン Jキー">A<small>パンチ</small></button></div></div>
 </nav></main>
 <script>'use strict';
 const $=id=>document.getElementById(id);
@@ -440,15 +482,16 @@ const Input=(()=>{
  function held(a){for(const x of sources.values())if(x===a)return true;return false}
  function press(a,source,stamp=performance.now()){const was=held(a);sources.set(source,a);if(!was&&!['up','down','left','right'].includes(a)){const cmd={a,t:stamp};if(!window.onGameAction?.(cmd)){queue.push(cmd);if(queue.length>8)queue.shift()}}if(window.Sound)Sound.unlock();}
  function release(source){sources.delete(source)}
- function clear(){sources.clear();pointerSets.forEach(s=>s.clear());queue.length=0;pid=null;ax=ay=0;$('nub').style.transform='';$('stick').classList.remove('active');document.querySelectorAll('.pressed').forEach(x=>x.classList.remove('pressed'))}
+ function clear(){sources.clear();pointerSets.forEach(s=>s.clear());queue.length=0;pid=null;ax=ay=0;$('nub').style.transform='';dpad(0,0,0);$('stick').classList.remove('active');document.querySelectorAll('.pressed').forEach(x=>x.classList.remove('pressed'))}
  document.querySelectorAll('[data-action]').forEach(el=>{
   const ids=new Set();pointerSets.push(ids);el.addEventListener('pointerdown',e=>{if(e.button!==0&&e.pointerType==='mouse')return;e.preventDefault();ids.add(e.pointerId);try{el.setPointerCapture(e.pointerId)}catch{}el.classList.add('pressed');press(el.dataset.action,'p'+e.pointerId,performance.now())},{passive:false});
   const up=e=>{ids.delete(e.pointerId);release('p'+e.pointerId);if(!ids.size)el.classList.remove('pressed')};['pointerup','pointercancel','lostpointercapture'].forEach(k=>el.addEventListener(k,up));
  });
- function move(e){if(e.pointerId!==pid)return;const r=$('stick').getBoundingClientRect();const dx=(e.clientX-r.left-r.width/2)/(r.width*.34),dy=(e.clientY-r.top-r.height/2)/(r.height*.34),l=Math.hypot(dx,dy);const strength=Math.min(1,Math.max(0,(l-.09)/.46)*Settings.sensitivity);ax=l?dx/l*strength:0;ay=l?dy/l*strength:0;$('nub').style.transform=`translate(${ax*r.width*.21}px,${ay*r.height*.21}px)`}
+ function dpad(nx,ny,l){const st=$('stick'),on=l>.16,sc=Math.min(1,Settings.sensitivity);ax=on?(nx>.38?sc:nx<-.38?-sc:0):0;ay=on?(ny>.38?sc:ny<-.38?-sc:0):0;const sx=Math.sign(ax),sy=Math.sign(ay);if(st.dataset.x!==String(sx))st.dataset.x=sx;if(st.dataset.y!==String(sy))st.dataset.y=sy;st.style.setProperty('--ry',(sx*9)+'deg');st.style.setProperty('--rx',(-sy*9)+'deg')}
+ function move(e){if(e.pointerId!==pid)return;const r=$('stick').getBoundingClientRect();const dx=(e.clientX-r.left-r.width/2)/(r.width*.5),dy=(e.clientY-r.top-r.height/2)/(r.height*.5),l=Math.hypot(dx,dy);dpad(l?dx/l:0,l?dy/l:0,l);const k=Math.min(l,1)*.09*r.width;$('nub').style.transform=l?`translate(${dx/l*k}px,${dy/l*k}px)`:''}
  $('stick').addEventListener('pointerdown',e=>{if(pid!==null)return;e.preventDefault();pid=e.pointerId;$('stick').classList.add('active');try{$('stick').setPointerCapture(pid)}catch{}move(e);window.Sound?.unlock()},{passive:false});
  const moveEvent=('onpointerrawupdate' in window)?'pointerrawupdate':'pointermove';$('stick').addEventListener(moveEvent,move,{passive:true});
- ['pointerup','pointercancel','lostpointercapture'].forEach(k=>$('stick').addEventListener(k,e=>{if(e.pointerId===pid){pid=null;ax=ay=0;$('nub').style.transform='';$('stick').classList.remove('active')}}));
+ ['pointerup','pointercancel','lostpointercapture'].forEach(k=>$('stick').addEventListener(k,e=>{if(e.pointerId===pid){pid=null;ax=ay=0;$('nub').style.transform='';dpad(0,0,0);$('stick').classList.remove('active')}}));
  document.addEventListener('keydown',e=>{if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;const a=keys[e.code];if(a){e.preventDefault();if(!e.repeat)press(a,'k'+e.code)}else if(!e.repeat){if(['Escape','KeyP','Enter'].includes(e.code)){e.preventDefault();window.onPause?.()}if(e.code==='KeyM')$('mute').click()}});
  document.addEventListener('keyup',e=>release('k'+e.code));
  window.addEventListener('blur',()=>{clear();window.onAutoPause?.()});document.addEventListener('visibilitychange',()=>{if(document.hidden){clear();window.onAutoPause?.()}});window.addEventListener('pagehide',clear);
@@ -643,7 +686,7 @@ function modal(label,heading,body,buttons){$('modalLabel').textContent=label;$('
 function resume(){Input.clear();G.mode='play';$('modal').classList.add('hidden');Sound.unlock();Sound.music(true)}
 function pause(){if(G.mode==='play'){G.mode='pause';Input.clear();Sound.music(false);modal('CAMP / 休息','ひと息、つこう。','<p>拳を下ろしても、旅は終わらない。</p>',[['つづける',resume],['遊び方',()=>guide(true)],['設定',()=>settings(true)],['タイトルへ',title]])}else if(G.mode==='pause')resume();else if(G.mode==='title')start(false)}
 window.onPause=pause;window.onAutoPause=()=>{if(G.mode==='play')pause()};
-function guide(fromPlay=false){if(fromPlay){G.mode='pause';Input.clear();Sound.music(false)}modal('FIELD NOTES / 戦いの手引き','魔法には、間合いで勝つ。','<div class="move-list"><b>移動</b><span>左パッド / WASD。上下へずれて魔法をかわし、敵に近づく。</span><b>拳 J</b><span>左ジャブ → 右ストレート → 両手パンチ</span><b>脚 K</b><span>右キック → 左キック → ドロップキック</span><b>回避</b><span>SPACE。方向＋回避で短い無敵ステップ。</span><b>震撃 U</b><span>闘気100で解放。周囲の敵と魔法を吹き飛ばす。</span></div><p class="tip">拳・脚は長押しで連撃。3撃目は結界を壊し、目の前の魔法弾も打ち返す。</p>',[[fromPlay?'戦いへ戻る':'閉じる',fromPlay?resume:()=>{$('modal').classList.add('hidden')}]] )}
+function guide(fromPlay=false){if(fromPlay){G.mode='pause';Input.clear();Sound.music(false)}modal('FIELD NOTES / 戦いの手引き','魔法には、間合いで勝つ。','<div class="move-list"><b>十字キー</b><span>左の十字キー / WASD。上下へずれて魔法をかわし、敵に近づく。</span><b>A パンチ (J)</b><span>左ジャブ → 右ストレート → 両手パンチ</span><b>B キック (K)</b><span>右キック → 左キック → ドロップキック</span><b>跳 ジャンプ (I)</b><span>A/Bの上。空中でA＝ジャンプパンチ、B＝飛び蹴り。</span><b>SELECT 回避</b><span>SPACE。方向＋回避で短い無敵ステップ。</span><b>START 震撃 (U)</b><span>闘気100で解放。周囲の敵と魔法を吹き飛ばす。</span></div><p class="tip">A・Bは長押しで連撃。3撃目は結界を壊し、目の前の魔法弾も打ち返す。</p>',[[fromPlay?'戦いへ戻る':'閉じる',fromPlay?resume:()=>{$('modal').classList.add('hidden')}]] )}
 function settings(fromPlay=false){modal('OPTIONS / 自分の間合い','手になじむ、戦い方。',`<div class="settings-row"><span>利き手</span><button id="handedOpt">${Settings.handed==='right'?'右手で攻撃':'左手で攻撃'}</button></div><div class="settings-row"><span>画面の揺れ・閃光</span><button id="reducedOpt">${Settings.reduced?'ひかえめ':'通常'}</button></div><div class="settings-row"><label for="qualityOpt">描画</label><select id="qualityOpt"><option value="auto">自動</option><option value="high">高精細</option><option value="low">軽量</option></select></div><div class="settings-row"><label for="senseOpt">パッド感度</label><input id="senseOpt" type="range" min="0.7" max="1.5" step=".1" value="${Settings.sensitivity}"></div><div class="settings-row"><label for="difficultyOpt">難易度</label><select id="difficultyOpt"><option value="journey">旅人 / 標準</option><option value="challenge">挑戦 / 強敵</option></select></div><p>旅人は被ダメージを軽減。連撃と回避を覚えながら攻略できます。</p>`,[['閉じる',fromPlay?()=>{G.mode='play';pause()}:()=>{$('modal').classList.add('hidden')}]]);$('qualityOpt').value=Settings.quality;$('difficultyOpt').value=G.difficulty;$('handedOpt').onclick=()=>{Settings.handed=Settings.handed==='right'?'left':'right';Store.set('handed',Settings.handed);applySettings();$('handedOpt').textContent=Settings.handed==='right'?'右手で攻撃':'左手で攻撃'};$('reducedOpt').onclick=()=>{Settings.reduced=!Settings.reduced;Store.set('reduced',Settings.reduced?'1':'0');$('reducedOpt').textContent=Settings.reduced?'ひかえめ':'通常'};$('qualityOpt').onchange=e=>{Settings.quality=e.target.value;Store.set('quality',Settings.quality);quality=Settings.quality==='low'?.5:1;resizePending=true};$('senseOpt').oninput=e=>{Settings.sensitivity=+e.target.value;Store.set('sensitivity',Settings.sensitivity)};$('difficultyOpt').onchange=e=>{G.difficulty=e.target.value}}
 $('start').onclick=()=>start(false);$('practice').onclick=()=>start(true);$('guide').onclick=()=>guide(false);$('settingsTitle').onclick=()=>settings(false);
 // Consume the command in the pointer/keyboard callback, including during hit-stop.

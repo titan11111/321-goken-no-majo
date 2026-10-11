@@ -97,3 +97,45 @@ body.danger .healthbar i{background:linear-gradient(180deg,#ff9a7a,#dd3a2b 55%,#
 #hud,#trainingLabel,#bossHud,#hud-stats{text-shadow:0 1px 2px rgba(0,0,0,.95),0 0 6px rgba(0,0,0,.8)}
 #trainingLabel{background:linear-gradient(90deg,rgba(6,8,8,.55),transparent);padding:3px 8px 3px 6px;border-radius:2px}
 @media (orientation:landscape) and (max-height:520px){#notice{bottom:auto;top:calc(env(safe-area-inset-top) + 56px);left:50%;transform:translateX(-50%);max-width:50vw}}
+
+/* ================= Famicom controller layout =================
+   十字キー(左) / SELECT・START(中央) / B・A(右)。B=キック、A=パンチ、SELECT=回避、START=震撃、跳=ジャンプ(A/Bの上) */
+#control-deck{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#control-deck .deck-left{order:0}#control-deck .deck-center{order:1;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-width:0}#control-deck .deck-right{order:2;gap:0}
+body.left-handed #control-deck .deck-left{order:2}body.left-handed #control-deck .deck-right{order:0}body.left-handed #control-deck .deck-center{order:1}
+.deck-info{display:none}
+/* D-pad: black plastic cross on a dark plate */
+#control-deck #stick{--dp:clamp(86px,min(34vw,15.5dvh),150px);width:var(--dp);height:var(--dp);min-width:0;min-height:0;border-radius:50%;background:radial-gradient(circle,rgba(0,0,0,.45) 0 64%,transparent 66%);box-shadow:none;transform:perspective(260px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .07s ease-out}
+#control-deck #stick.active{box-shadow:none;background:radial-gradient(circle,rgba(0,0,0,.45) 0 64%,rgba(var(--accent-rgb),.22) 66%,transparent 72%)}
+.cross-wrap{position:absolute;inset:0;pointer-events:none;filter:drop-shadow(0 5px 5px rgba(0,0,0,.65))}
+.cross-rim,.cross{position:absolute;pointer-events:none;clip-path:polygon(33% 0,67% 0,67% 33%,100% 33%,100% 67%,67% 67%,67% 100%,33% 100%,33% 67%,0 67%,0 33%,33% 33%)}
+.cross-rim{inset:0;background:var(--rim)}.cross{inset:3%;background:linear-gradient(160deg,#34373a,#0d0e0f 70%)}
+#control-deck #stick span{font-size:calc(var(--dp)*.1);color:rgba(var(--accent-rgb),.5);z-index:2}
+#control-deck #stick .n{top:9%;left:50%;transform:translateX(-50%)}#control-deck #stick .s{bottom:9%;left:50%;transform:translateX(-50%);top:auto}#control-deck #stick .w{left:9%;top:50%;transform:translateY(-50%)}#control-deck #stick .e{right:9%;top:50%;transform:translateY(-50%);left:auto}
+#stick[data-y="-1"] .n,#stick[data-y="1"] .s,#stick[data-x="-1"] .w,#stick[data-x="1"] .e{color:#fff;text-shadow:0 0 9px var(--accent),0 0 3px var(--accent)}
+#control-deck #nub{width:27%;height:27%;left:36.5%;top:36.5%;z-index:1;background:radial-gradient(circle at 50% 38%,#08090a,#1c1e20 70%);border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 2px 3px #000,0 1px 0 rgba(255,255,255,.12)}
+#control-deck #stick.active #nub{border-color:rgba(var(--accent-rgb),.6)}
+/* SELECT / START pills */
+.fc-pills{display:flex;flex-direction:column;gap:10px;align-items:center}
+#control-deck .pill{width:clamp(62px,18.5vw,78px);min-width:62px;height:50px;min-height:50px;border-radius:25px;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font:700 15px/1 "Yu Mincho","Hiragino Mincho ProN",serif;color:var(--accent2);background:linear-gradient(#4a4b4d,#1c1d1e 55%,#101112);border:1px solid #000;box-shadow:0 0 0 1.5px var(--rim),0 4px 0 #040505,0 8px 12px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.2)}
+#control-deck .pill small{font:700 8px ui-monospace,monospace;letter-spacing:1.5px;color:var(--accent2);opacity:.6;margin:0}
+#control-deck .pill.pressed{transform:translateY(3px);box-shadow:0 0 0 1.5px var(--accent),0 1px 0 #040505,0 0 14px rgba(var(--accent-rgb),.5),inset 0 1px 0 rgba(255,255,255,.2);filter:brightness(1.35)}
+#control-deck #burst::after{left:12px;right:auto;bottom:6px;height:4px;width:calc((100% - 24px)*var(--rage,0)/100);border-radius:2px}
+body.rage #control-deck #burst{border-color:#000;box-shadow:0 0 0 1.5px var(--accent),0 4px 0 #040505,0 0 18px rgba(var(--accent-rgb),.6),inset 0 1px 0 rgba(255,255,255,.2)}
+/* B / A: Famicom red; jump sits above and between */
+#control-deck .main-actions{display:grid;grid-template-columns:auto auto;gap:6px 12px;align-items:center;justify-items:center}
+#control-deck .main-actions .jump{grid-column:1/-1;grid-row:1;width:max(48px,calc(var(--btn)*.95));height:max(48px,calc(var(--btn)*.95));font-size:calc(var(--btn)*.4)}
+#control-deck .main-actions .kick{grid-column:1;grid-row:2}#control-deck .main-actions .punch{grid-column:2;grid-row:2}
+#control-deck .kick,#control-deck .punch{width:max(52px,calc(var(--btn)*1.2));height:max(52px,calc(var(--btn)*1.2));--glow:255,70,50;font:900 calc(var(--btn)*.5) "Helvetica Neue",Arial,sans-serif;color:#fff1ea;text-shadow:0 2px 0 rgba(90,0,0,.7);background:radial-gradient(circle at 34% 24%,#ff9e90,#d82a20 50%,#6a0c09 100%)}
+#control-deck .kick small,#control-deck .punch small,#control-deck .jump small{font:700 calc(var(--btn)*.15) "Yu Gothic",sans-serif;letter-spacing:0;opacity:.85;margin-top:1px;text-shadow:none}
+#control-deck .kick small,#control-deck .punch small{color:#ffd9d0}
+/* landscape: dpad | SELECT START + hint | jump B A in one row */
+@media(max-height:500px) and (orientation:landscape){
+ #control-deck{padding:6px 28px}
+ #control-deck .deck-center{gap:3px}#control-deck .fc-pills{flex-direction:row;gap:12px}.deck-info{display:flex;flex-direction:column;align-items:center}.deck-info .deck-brand,.deck-info #perf{display:none}.deck-info #hint{font-size:10px}
+ #control-deck #stick{--dp:clamp(70px,34dvh,92px)}
+ #control-deck .pill{width:78px}
+ #control-deck .main-actions{display:flex;gap:12px}
+ #control-deck .main-actions .jump{width:max(48px,calc(var(--btn)*.95));height:max(48px,calc(var(--btn)*.95))}
+ #control-deck .kick,#control-deck .punch{width:max(52px,var(--btn));height:max(52px,var(--btn))}
+}
