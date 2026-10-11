@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-10T23:58:30.625Z",
+  "date": "2026-10-11T00:22:05.843Z",
   "results": [
     {
       "name": "chromium-painted-assets-decoded",
@@ -12,9 +12,9 @@
         },
         "failed": [],
         "heroPose": {
-          "frame": 0,
-          "shift": 0,
-          "bob": 0.5568573462101067
+          "frame": 28,
+          "shift": -5,
+          "bob": 0
         }
       }
     },
@@ -77,9 +77,9 @@
         },
         "failed": [],
         "heroPose": {
-          "frame": 1,
+          "frame": 0,
           "shift": 0,
-          "bob": 0.294461866296855
+          "bob": 0.10236824996772517
         }
       }
     },
@@ -123,7 +123,7 @@
       "name": "webkit-sustained-render",
       "pass": true,
       "evidence": {
-        "fps": 57,
+        "fps": 60,
         "errors": []
       }
     },
