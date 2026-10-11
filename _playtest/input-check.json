@@ -36,11 +36,11 @@
       "unavailable": 0
     },
     "samples": 21,
-    "mean": 0.4333333332268965,
-    "p95": 0.40000000037252903,
-    "max": 7.300000000745058
+    "mean": 0.07142857151726882,
+    "p95": 0.30000000074505806,
+    "max": 0.6999999992549419
   },
-  "fps": 60,
+  "fps": 56,
   "zoom": 1,
   "note": "Input metric is event-handler to simulation processing on desktop Chromium emulating a phone; not touch-to-photon or physical iPhone latency."
 }

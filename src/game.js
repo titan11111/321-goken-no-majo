@@ -112,7 +112,7 @@ function update(dt){G.time+=dt;quakeStep(dt);const p=G.p;if(G.noticeLife>0){G.no
  // Velocity is smoothed (exponential approach) instead of snapping to the stick value: starts and stops ease in/out,
  // the walk cycle is driven by distance travelled so feet do not skate, and momentum carries through jumps and dashes.
  if(p.dash>0){p.dash-=dt;const u=clamp(1-p.dash/.22,0,1),f=1.45-.9*u;p.vx=p.dx*610*f;p.vz=p.dz*2.3*f;if(Math.random()<.3*quality)particle(p.x,foot(p.z)-15,'#739e8d',1,.35)}
- else{let tx=0,tz=0,k=12;if(p.stun<=0){const sp=p.attack?(grounded?72:150):205;tx=a.x*sp;tz=a.y*(p.attack?(grounded?.35:.6):.8);k=grounded?((tx||tz)?20:26):5;if(Math.abs(a.x)>.22&&(!p.attack||p.attack.t>p.attack.m.active+.12))p.face=a.x>0?1:-1}const ease=1-Math.exp(-dt*k);p.vx+=(tx-p.vx)*ease;p.vz+=(tz-p.vz)*ease}
+ else{let tx=0,tz=0,k=12;if(p.stun<=0){const sp=p.attack?(grounded?120:230):300;tx=a.x*sp;tz=a.y*(p.attack?(grounded?.55:.8):1.05);k=grounded?((tx||tz)?38:34):9;if(Math.abs(a.x)>.22&&(!p.attack||p.attack.t>p.attack.m.active+.12))p.face=a.x>0?1:-1}const ease=1-Math.exp(-dt*k);p.vx+=(tx-p.vx)*ease;p.vz+=(tz-p.vz)*ease}
  p.x+=p.vx*dt;p.z+=p.vz*dt;const spd=Math.hypot(p.vx,p.vz*170);p.moving=grounded&&spd>24;if(grounded)p.walk+=spd*dt/118*TAU;
  if(p.h>0||p.vh!==0){p.jt+=dt;const cut=p.vh>0&&p.jt>.07&&!Input.held('jump')?1.8:1;p.vh-=2400*cut*dt;p.h+=p.vh*dt;if(p.h<=0){const fall=-p.vh;p.h=0;p.vh=0;p.land=.09;p.airUsed=false;if(p.attack&&p.attack.m.air)p.attack=null;particle(p.x,foot(p.z)-2,'#b8ae91',fall>420?10:5,.5);ring(p.x,p.z,'#e5d4ae66',fall>420?40:28);Sound.fx('land')}}
  p.land=Math.max(0,p.land-dt);
