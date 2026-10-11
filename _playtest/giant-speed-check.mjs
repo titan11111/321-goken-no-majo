@@ -1,0 +1,30 @@
+import {chromium} from '../../playwright-test/node_modules/playwright/index.mjs';
+import assert from 'node:assert/strict';
+const b=await chromium.launch({headless:true});
+const p=await b.newPage({viewport:{width:390,height:844},hasTouch:true,isMobile:true});
+const errors=[];p.on('pageerror',e=>errors.push(e.message));
+await p.goto('http://127.0.0.1:8917/321-goken-no-majo/?test=1');
+await p.waitForFunction(()=>__iron.snapshot().art.ready.hero);
+const walk=await p.evaluate(()=>{
+  const T=__iron.test,S=T.state,fire=(type,code)=>document.dispatchEvent(new KeyboardEvent(type,{key:code,code,bubbles:true}));
+  const press=code=>fire('keydown',code),release=code=>fire('keyup',code);
+  const run=(giant)=>{
+    T.start(false);S.p.giant=giant;S.p.x=200;S.p.vx=0;S.p.vz=0;S.p.dash=0;S.p.attack=null;S.p.stun=0;S.p.h=0;S.p.kb=0;
+    press('ArrowRight');
+    for(let i=0;i<48;i++)T.step(1/60);
+    release('ArrowRight');
+    const dx=S.p.x-200;
+    T.start(false);S.p.giant=giant;S.p.x=200;S.p.vx=0;S.p.attack=null;S.p.h=0;S.p.stun=0;
+    T.attack('punch');
+    for(let i=0;i<6;i++)T.step(1/60);
+    const atk=S.p.attack;
+    return {dx,atkT:atk?atk.t:0};
+  };
+  return {normal:run(0),giant:run(30)};
+});
+console.log(JSON.stringify(walk));
+assert(walk.giant.dx<walk.normal.dx*0.75&&walk.giant.dx>walk.normal.dx*0.4,`walk ${walk.giant.dx} vs ${walk.normal.dx}`);
+assert(walk.giant.atkT<walk.normal.atkT*0.85&&walk.giant.atkT>walk.normal.atkT*0.55,`atk ${walk.giant.atkT} vs ${walk.normal.atkT}`);
+assert(errors.length===0,errors.join('\n'));
+await b.close();
+console.log('PASS giant slower than normal');
