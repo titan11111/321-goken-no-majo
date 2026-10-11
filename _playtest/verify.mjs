@@ -17,6 +17,7 @@ run('reflect-magic',()=>{reset();T.place({stepP:2,chainLife:1});T.shot({x:210,z:
 run('dash-invulnerability',()=>{reset();S.mode='play';T.dash();const before=S.p.hp;T.hurt(24,250);S.mode='test';return S.p.hp===before&&S.p.inv>0});
 run('damage-after-invulnerability',()=>{reset();S.training=false;S.mode='play';T.hurt(24,250);S.mode='test';return S.p.hp<120&&S.stats.damage>0});
 run('burst-clears-magic',()=>{reset();T.enemy('guard',200,.6);T.shot({});T.place({rage:100});T.burst();return S.shots.length===0&&S.p.rage===0&&S.enemies[0].shield===0});
+run('burst-shockwave-wide-damage',()=>{reset();S.shots=[];T.place({x:110,rage:100});T.enemy('ember',160,.6);T.enemy('ember',560,.3);T.enemy('guard',860,.8);const hp=S.enemies.map(e=>e.hp);T.burst();const early=S.enemies.every((e,i)=>e.hp===hp[i]);S.quakes[0].t=.6;T.step(.01);return early&&S.quakes.length===1&&S.enemies.every((e,i)=>e.hp<hp[i])&&S.enemies[0].hp<=0&&S.enemies[2].hp>0});
 run('boss-second-phase',()=>{reset();const id=T.enemy('boss',270,.6);S.enemies[0].hp=500;step(1);return S.enemies[0].phase===2});
 run('wave-advances',()=>{reset();S.training=false;T.beginWave(0);S.enemies.forEach(e=>{e.hp=0;e.dead=.1});step(1);return !S.gate.active&&S.gate.index===1});
 run('loss-and-retry',()=>{reset();S.training=false;S.mode='play';T.place({hp:1,inv:0});T.hurt(100,200);const over=S.mode==='over';T.start(false,true);const retry=S.mode==='play'&&S.p.hp===120;S.mode='test';return over&&retry});
