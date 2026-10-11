@@ -14,6 +14,7 @@ run('depth-miss',()=>{reset();T.enemy('ember',200,.14);T.attack('punch');step(15
 run('near-hit',()=>{reset();T.enemy('ember',205,.6);T.attack('punch');step(15);return S.enemies[0].hp<58});
 run('shield-break',()=>{reset();T.enemy('guard',210,.6);T.attack('punch');step(26);const reduced=S.enemies[0].hp===109;T.attack('punch');step(30);T.attack('punch');step(12);return reduced&&S.enemies[0].shield===0});
 run('reflect-magic',()=>{reset();T.place({stepP:2,chainLife:1});T.shot({x:210,z:.6});T.attack('punch');step(12);return S.stats.reflections===1&&S.shots[0]?.reflected});
+run('reflect-timing-grades',()=>{const g=(dist)=>{reset();T.place({x:110,face:1,stepP:2,chainLife:1});T.shot({x:110+dist,z:.6});T.place({z:.6});T.attack('punch');step(60);const sh=S.shots[0];return sh&&sh.reflected?{grade:sh.grade,dmg:sh.dmg}:null};const perfect=g(156),great=g(175),ok=g(100);return perfect&&great&&ok&&perfect.grade===2&&great.grade===1&&ok.grade===0&&perfect.dmg>great.dmg&&great.dmg>ok.dmg});
 run('dash-invulnerability',()=>{reset();S.mode='play';T.dash();const before=S.p.hp;T.hurt(24,250);S.mode='test';return S.p.hp===before&&S.p.inv>0});
 run('damage-after-invulnerability',()=>{reset();S.training=false;S.mode='play';T.hurt(24,250);S.mode='test';return S.p.hp<120&&S.stats.damage>0});
 run('burst-clears-magic',()=>{reset();T.enemy('guard',200,.6);T.shot({});T.place({rage:100});T.burst();return S.shots.length===0&&S.p.rage===0&&S.enemies[0].shield===0});

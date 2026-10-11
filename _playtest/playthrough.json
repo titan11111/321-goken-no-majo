@@ -10,16 +10,17 @@
     5
   ],
   "stats": {
-    "hits": 89,
+    "hits": 95,
     "damage": 102,
-    "reflections": 8,
-    "dodges": 5,
-    "maxCombo": 23,
-    "kills": 17
+    "reflections": 14,
+    "dodges": 6,
+    "maxCombo": 25,
+    "kills": 17,
+    "perfects": 1
   },
-  "hp": 82,
-  "time": 41.571000000001284,
-  "score": 38750,
+  "hp": 50,
+  "time": 45.87200000000173,
+  "score": 40187,
   "moves": [
     "左ジャブ",
     "右ストレート",
@@ -33,53 +34,54 @@
     {
       "wave": 0,
       "hp": 120,
-      "time": 0.8620000000000007,
+      "time": 0.47100000000000003,
       "score": 0
     },
     {
       "wave": 1,
-      "hp": 88,
-      "time": 8.535999999999945,
-      "score": 1760
+      "hp": 120,
+      "time": 6.061999999999996,
+      "score": 1920
     },
     {
       "wave": 2,
-      "hp": 104,
-      "time": 13.681999999999572,
-      "score": 4875
+      "hp": 120,
+      "time": 11.978999999999727,
+      "score": 5195
     },
     {
       "wave": 3,
-      "hp": 104,
-      "time": 19.61499999999925,
-      "score": 8045
+      "hp": 120,
+      "time": 18.186999999999312,
+      "score": 10015
     },
     {
       "wave": 4,
       "hp": 120,
-      "time": 24.529999999998974,
-      "score": 12370
+      "time": 23.874999999999073,
+      "score": 14155
     },
     {
       "wave": 5,
       "hp": 120,
-      "time": 28.649999999998712,
-      "score": 16585
+      "time": 29.899999999998755,
+      "score": 18320
     },
     {
-      "tick": 300,
+      "tick": 286,
       "mode": "clear",
       "stats": {
-        "hits": 89,
+        "hits": 95,
         "damage": 102,
-        "reflections": 8,
-        "dodges": 5,
-        "maxCombo": 23,
-        "kills": 17
+        "reflections": 14,
+        "dodges": 6,
+        "maxCombo": 25,
+        "kills": 17,
+        "perfects": 1
       },
       "wave": 5,
-      "hp": 82,
-      "time": 41.571000000001284
+      "hp": 50,
+      "time": 45.87200000000173
     }
   ]
 }

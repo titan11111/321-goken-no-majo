@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-11T00:35:50.610Z",
+  "date": "2026-10-11T00:38:57.819Z",
   "results": [
     {
       "name": "start",
@@ -28,6 +28,11 @@
     },
     {
       "name": "reflect-magic",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "reflect-timing-grades",
       "pass": true,
       "evidence": ""
     },
@@ -87,8 +92,8 @@
       "name": "keyboard-movement",
       "pass": true,
       "evidence": {
-        "x0": 295.06665974628885,
-        "x1": 339.35433156938694
+        "x0": 295.066659746289,
+        "x1": 329.1934773496348
       }
     },
     {
@@ -183,7 +188,7 @@
         ],
         "audio": "running",
         "errors": [],
-        "fps": 27
+        "fps": 60
       }
     }
   ]

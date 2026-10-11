@@ -81,6 +81,6 @@ const MagicFx=(()=>{
    c.logical=D;runes.set(key,c)}
   const k=r/q,D=c.logical*k;ctx.save();ctx.translate(x,y);ctx.scale(1,.43);ctx.rotate(t*.3);ctx.drawImage(c,-D/2,-D/2,D,D);ctx.restore();
  }
- for(const c of['#ffac72','#8edce8','#90efc8','#ffe6a7'])set(c);
+ for(const c of['#ffac72','#8edce8','#90efc8','#ffe6a7','#9ee8ff','#fff3b8'])set(c);
  return{shot,charge,blast,pillar,glow,rune};
 })();
