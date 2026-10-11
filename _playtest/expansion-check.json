@@ -1,0 +1,816 @@
+[
+  {
+    "name": "chromium hero recoil direction and pose",
+    "pass": true,
+    "evidence": {
+      "initial": {
+        "t": 0,
+        "duration": 0.34,
+        "dir": -1,
+        "power": 0.65,
+        "armored": false,
+        "pose": {
+          "frame": 28,
+          "shift": 0,
+          "bob": 0,
+          "hurt": true
+        }
+      },
+      "immune": true,
+      "recoveredControl": true,
+      "cancel": true,
+      "otherDir": 1,
+      "ends": true
+    }
+  },
+  {
+    "name": "chromium no extra control lock or repeated damage",
+    "pass": true
+  },
+  {
+    "name": "chromium all 7 enemy appearances react",
+    "pass": true,
+    "evidence": [
+      {
+        "kind": "ember",
+        "type": "ember",
+        "character": null,
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 13,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "frost",
+        "type": "frost",
+        "character": null,
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 14,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "guard",
+        "type": "guard",
+        "character": null,
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 15,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "boss",
+        "type": "boss",
+        "character": null,
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 16,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "ignia",
+        "type": "ember",
+        "character": "ignia",
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 17,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "selene",
+        "type": "frost",
+        "character": "selene",
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 18,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "vera",
+        "type": "guard",
+        "character": "vera",
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 19,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      }
+    ]
+  },
+  {
+    "name": "chromium women retain 3 combat roles",
+    "pass": true
+  },
+  {
+    "name": "chromium armored boss visibly reacts but keeps chant",
+    "pass": true,
+    "evidence": {
+      "cast": 1,
+      "stun": 0,
+      "react": {
+        "t": 0,
+        "duration": 0.34,
+        "dir": 1,
+        "power": 0.28,
+        "armored": true
+      },
+      "pose": {
+        "id": 20,
+        "hurt": false,
+        "casting": true,
+        "row": 1,
+        "recoil": 0.098
+      }
+    }
+  },
+  {
+    "name": "chromium practice respawns same female character",
+    "pass": true,
+    "evidence": {
+      "character": "selene",
+      "hp": 76,
+      "react": null
+    }
+  },
+  {
+    "name": "chromium 8 distinct scenes in 10 fights",
+    "pass": true,
+    "evidence": [
+      {
+        "wave": 0,
+        "area": 0,
+        "name": "石化した街",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 0,
+          "theme": 1,
+          "music": "strike"
+        },
+        "enemies": [
+          "ignia",
+          "ember"
+        ]
+      },
+      {
+        "wave": 1,
+        "area": 1,
+        "name": "城外橋",
+        "scene": {
+          "asset": "scenes",
+          "frame": 0,
+          "theme": 0,
+          "music": "strike"
+        },
+        "enemies": [
+          "ember",
+          "selene"
+        ]
+      },
+      {
+        "wave": 2,
+        "area": 1,
+        "name": "城外橋",
+        "scene": {
+          "asset": "scenes",
+          "frame": 0,
+          "theme": 0,
+          "music": "strike"
+        },
+        "enemies": [
+          "ignia",
+          "ember",
+          "frost"
+        ]
+      },
+      {
+        "wave": 3,
+        "area": 2,
+        "name": "地下水路",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 1,
+          "theme": 2,
+          "music": "lock"
+        },
+        "enemies": [
+          "selene",
+          "guard"
+        ]
+      },
+      {
+        "wave": 4,
+        "area": 3,
+        "name": "灰の回廊",
+        "scene": {
+          "asset": "scenes",
+          "frame": 1,
+          "theme": 1,
+          "music": "lock"
+        },
+        "enemies": [
+          "vera",
+          "ignia",
+          "frost"
+        ]
+      },
+      {
+        "wave": 5,
+        "area": 4,
+        "name": "月下の庭園",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 2,
+          "theme": 4,
+          "music": "iron"
+        },
+        "enemies": [
+          "selene",
+          "ignia",
+          "guard"
+        ]
+      },
+      {
+        "wave": 6,
+        "area": 5,
+        "name": "禁書庫",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 3,
+          "theme": 5,
+          "music": "lock"
+        },
+        "enemies": [
+          "vera",
+          "frost",
+          "ember"
+        ]
+      },
+      {
+        "wave": 7,
+        "area": 5,
+        "name": "禁書庫",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 3,
+          "theme": 5,
+          "music": "lock"
+        },
+        "enemies": [
+          "ignia",
+          "selene",
+          "vera",
+          "ember"
+        ]
+      },
+      {
+        "wave": 8,
+        "area": 6,
+        "name": "封印の門",
+        "scene": {
+          "asset": "scenes",
+          "frame": 2,
+          "theme": 2,
+          "music": "lock"
+        },
+        "enemies": [
+          "vera",
+          "guard",
+          "selene",
+          "ignia"
+        ]
+      },
+      {
+        "wave": 9,
+        "area": 7,
+        "name": "魔王の玉座",
+        "scene": {
+          "asset": "scenes",
+          "frame": 3,
+          "theme": 3,
+          "music": "standoff"
+        },
+        "enemies": [
+          "boss"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chromium women appear throughout journey",
+    "pass": true,
+    "evidence": [
+      "ignia",
+      "ember",
+      "ember",
+      "selene",
+      "ignia",
+      "ember",
+      "frost",
+      "selene",
+      "guard",
+      "vera",
+      "ignia",
+      "frost",
+      "selene",
+      "ignia",
+      "guard",
+      "vera",
+      "frost",
+      "ember",
+      "ignia",
+      "selene",
+      "vera",
+      "ember",
+      "vera",
+      "guard",
+      "selene",
+      "ignia",
+      "boss"
+    ]
+  },
+  {
+    "name": "chromium boss only at journey end",
+    "pass": true
+  },
+  {
+    "name": "chromium no runtime errors",
+    "pass": true,
+    "evidence": []
+  },
+  {
+    "name": "webkit hero recoil direction and pose",
+    "pass": true,
+    "evidence": {
+      "initial": {
+        "t": 0,
+        "duration": 0.34,
+        "dir": -1,
+        "power": 0.65,
+        "armored": false,
+        "pose": {
+          "frame": 28,
+          "shift": 0,
+          "bob": 0,
+          "hurt": true
+        }
+      },
+      "immune": true,
+      "recoveredControl": true,
+      "cancel": true,
+      "otherDir": 1,
+      "ends": true
+    }
+  },
+  {
+    "name": "webkit no extra control lock or repeated damage",
+    "pass": true
+  },
+  {
+    "name": "webkit all 7 enemy appearances react",
+    "pass": true,
+    "evidence": [
+      {
+        "kind": "ember",
+        "type": "ember",
+        "character": null,
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 13,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "frost",
+        "type": "frost",
+        "character": null,
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 14,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "guard",
+        "type": "guard",
+        "character": null,
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 15,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "boss",
+        "type": "boss",
+        "character": null,
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 16,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "ignia",
+        "type": "ember",
+        "character": "ignia",
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 17,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "selene",
+        "type": "frost",
+        "character": "selene",
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 18,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      },
+      {
+        "kind": "vera",
+        "type": "guard",
+        "character": "vera",
+        "react": {
+          "t": 0,
+          "duration": 0.48,
+          "dir": 1,
+          "power": 1,
+          "armored": false
+        },
+        "pose": {
+          "id": 19,
+          "hurt": true,
+          "casting": false,
+          "row": 2,
+          "recoil": 0.35
+        }
+      }
+    ]
+  },
+  {
+    "name": "webkit women retain 3 combat roles",
+    "pass": true
+  },
+  {
+    "name": "webkit armored boss visibly reacts but keeps chant",
+    "pass": true,
+    "evidence": {
+      "cast": 1,
+      "stun": 0,
+      "react": {
+        "t": 0,
+        "duration": 0.34,
+        "dir": 1,
+        "power": 0.28,
+        "armored": true
+      },
+      "pose": {
+        "id": 20,
+        "hurt": false,
+        "casting": true,
+        "row": 1,
+        "recoil": 0.098
+      }
+    }
+  },
+  {
+    "name": "webkit practice respawns same female character",
+    "pass": true,
+    "evidence": {
+      "character": "selene",
+      "hp": 76,
+      "react": null
+    }
+  },
+  {
+    "name": "webkit 8 distinct scenes in 10 fights",
+    "pass": true,
+    "evidence": [
+      {
+        "wave": 0,
+        "area": 0,
+        "name": "石化した街",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 0,
+          "theme": 1,
+          "music": "strike"
+        },
+        "enemies": [
+          "ignia",
+          "ember"
+        ]
+      },
+      {
+        "wave": 1,
+        "area": 1,
+        "name": "城外橋",
+        "scene": {
+          "asset": "scenes",
+          "frame": 0,
+          "theme": 0,
+          "music": "strike"
+        },
+        "enemies": [
+          "ember",
+          "selene"
+        ]
+      },
+      {
+        "wave": 2,
+        "area": 1,
+        "name": "城外橋",
+        "scene": {
+          "asset": "scenes",
+          "frame": 0,
+          "theme": 0,
+          "music": "strike"
+        },
+        "enemies": [
+          "ignia",
+          "ember",
+          "frost"
+        ]
+      },
+      {
+        "wave": 3,
+        "area": 2,
+        "name": "地下水路",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 1,
+          "theme": 2,
+          "music": "lock"
+        },
+        "enemies": [
+          "selene",
+          "guard"
+        ]
+      },
+      {
+        "wave": 4,
+        "area": 3,
+        "name": "灰の回廊",
+        "scene": {
+          "asset": "scenes",
+          "frame": 1,
+          "theme": 1,
+          "music": "lock"
+        },
+        "enemies": [
+          "vera",
+          "ignia",
+          "frost"
+        ]
+      },
+      {
+        "wave": 5,
+        "area": 4,
+        "name": "月下の庭園",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 2,
+          "theme": 4,
+          "music": "iron"
+        },
+        "enemies": [
+          "selene",
+          "ignia",
+          "guard"
+        ]
+      },
+      {
+        "wave": 6,
+        "area": 5,
+        "name": "禁書庫",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 3,
+          "theme": 5,
+          "music": "lock"
+        },
+        "enemies": [
+          "vera",
+          "frost",
+          "ember"
+        ]
+      },
+      {
+        "wave": 7,
+        "area": 5,
+        "name": "禁書庫",
+        "scene": {
+          "asset": "scenes-journey",
+          "frame": 3,
+          "theme": 5,
+          "music": "lock"
+        },
+        "enemies": [
+          "ignia",
+          "selene",
+          "vera",
+          "ember"
+        ]
+      },
+      {
+        "wave": 8,
+        "area": 6,
+        "name": "封印の門",
+        "scene": {
+          "asset": "scenes",
+          "frame": 2,
+          "theme": 2,
+          "music": "lock"
+        },
+        "enemies": [
+          "vera",
+          "guard",
+          "selene",
+          "ignia"
+        ]
+      },
+      {
+        "wave": 9,
+        "area": 7,
+        "name": "魔王の玉座",
+        "scene": {
+          "asset": "scenes",
+          "frame": 3,
+          "theme": 3,
+          "music": "standoff"
+        },
+        "enemies": [
+          "boss"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "webkit women appear throughout journey",
+    "pass": true,
+    "evidence": [
+      "ignia",
+      "ember",
+      "ember",
+      "selene",
+      "ignia",
+      "ember",
+      "frost",
+      "selene",
+      "guard",
+      "vera",
+      "ignia",
+      "frost",
+      "selene",
+      "ignia",
+      "guard",
+      "vera",
+      "frost",
+      "ember",
+      "ignia",
+      "selene",
+      "vera",
+      "ember",
+      "vera",
+      "guard",
+      "selene",
+      "ignia",
+      "boss"
+    ]
+  },
+  {
+    "name": "webkit boss only at journey end",
+    "pass": true
+  },
+  {
+    "name": "webkit no runtime errors",
+    "pass": true,
+    "evidence": []
+  }
+]

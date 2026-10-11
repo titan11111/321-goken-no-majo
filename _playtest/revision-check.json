@@ -1,0 +1,376 @@
+[
+  {
+    "name": "chromium opening starts",
+    "pass": true
+  },
+  {
+    "name": "chromium opening full stage",
+    "pass": true
+  },
+  {
+    "name": "chromium story visible",
+    "pass": true
+  },
+  {
+    "name": "chromium no instructions",
+    "pass": true
+  },
+  {
+    "name": "chromium skip starts play",
+    "pass": true
+  },
+  {
+    "name": "chromium controls restored",
+    "pass": true
+  },
+  {
+    "name": "chromium persisted intro off",
+    "pass": true
+  },
+  {
+    "name": "chromium rage 4x",
+    "pass": true,
+    "data": {
+      "light": 24,
+      "heavy": 52,
+      "cap": 100,
+      "training": 6,
+      "texts": [
+        "バキッ",
+        "ドガッ！",
+        "バキィッ！"
+      ]
+    }
+  },
+  {
+    "name": "chromium impact lettering",
+    "pass": true,
+    "data": [
+      "バキッ",
+      "ドガッ！",
+      "バキィッ！"
+    ]
+  },
+  {
+    "name": "chromium quake cannot refill or cross waves",
+    "pass": true,
+    "data": {
+      "rage": 0,
+      "residual": 0
+    }
+  },
+  {
+    "name": "chromium all 9 transitions under 1s",
+    "pass": true,
+    "data": [
+      {
+        "wave": 1,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.70616113744076,
+        "cam": 0
+      },
+      {
+        "wave": 2,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.70616113744076,
+        "cam": 0
+      },
+      {
+        "wave": 3,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.70616113744076,
+        "cam": 0
+      },
+      {
+        "wave": 4,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.70616113744076,
+        "cam": 0
+      },
+      {
+        "wave": 5,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.70616113744076,
+        "cam": 0
+      },
+      {
+        "wave": 6,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.70616113744076,
+        "cam": 0
+      },
+      {
+        "wave": 7,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.70616113744076,
+        "cam": 0
+      },
+      {
+        "wave": 8,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.70616113744076,
+        "cam": 0
+      },
+      {
+        "wave": 9,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.70616113744076,
+        "cam": 0
+      }
+    ]
+  },
+  {
+    "name": "chromium 8 walk frames",
+    "pass": true,
+    "data": [
+      {
+        "x": 309.51918409521977,
+        "frame": 0
+      },
+      {
+        "x": 313.5231652809266,
+        "frame": 0
+      },
+      {
+        "x": 318.8218259277231,
+        "frame": 0
+      },
+      {
+        "x": 323.5902013299063,
+        "frame": 1
+      },
+      {
+        "x": 328.2658784517071,
+        "frame": 1
+      },
+      {
+        "x": 333.536055929033,
+        "frame": 1
+      },
+      {
+        "x": 338.1981774974982,
+        "frame": 1
+      },
+      {
+        "x": 343.01811512194837,
+        "frame": 1
+      },
+      {
+        "x": 348.4419419920983,
+        "frame": 2
+      },
+      {
+        "x": 353.5689407125062,
+        "frame": 2
+      },
+      {
+        "x": 358.5474835827008,
+        "frame": 2
+      },
+      {
+        "x": 363.4967107338964,
+        "frame": 2
+      }
+    ]
+  },
+  {
+    "name": "chromium walk stops",
+    "pass": true
+  },
+  {
+    "name": "chromium no runtime errors",
+    "pass": true,
+    "data": []
+  },
+  {
+    "name": "webkit opening starts",
+    "pass": true
+  },
+  {
+    "name": "webkit opening full stage",
+    "pass": true
+  },
+  {
+    "name": "webkit story visible",
+    "pass": true
+  },
+  {
+    "name": "webkit no instructions",
+    "pass": true
+  },
+  {
+    "name": "webkit skip starts play",
+    "pass": true
+  },
+  {
+    "name": "webkit controls restored",
+    "pass": true
+  },
+  {
+    "name": "webkit persisted intro off",
+    "pass": true
+  },
+  {
+    "name": "webkit rage 4x",
+    "pass": true,
+    "data": {
+      "light": 24,
+      "heavy": 52,
+      "cap": 100,
+      "training": 6,
+      "texts": [
+        "バキッ",
+        "ドガッ！",
+        "バキィッ！"
+      ]
+    }
+  },
+  {
+    "name": "webkit impact lettering",
+    "pass": true,
+    "data": [
+      "バキッ",
+      "ドガッ！",
+      "バキィッ！"
+    ]
+  },
+  {
+    "name": "webkit quake cannot refill or cross waves",
+    "pass": true,
+    "data": {
+      "rage": 0,
+      "residual": 0
+    }
+  },
+  {
+    "name": "webkit all 9 transitions under 1s",
+    "pass": true,
+    "data": [
+      {
+        "wave": 1,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.7083755029498,
+        "cam": 0
+      },
+      {
+        "wave": 2,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.7083755029498,
+        "cam": 0
+      },
+      {
+        "wave": 3,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.7083755029498,
+        "cam": 0
+      },
+      {
+        "wave": 4,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.7083755029498,
+        "cam": 0
+      },
+      {
+        "wave": 5,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.7083755029498,
+        "cam": 0
+      },
+      {
+        "wave": 6,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.7083755029498,
+        "cam": 0
+      },
+      {
+        "wave": 7,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.7083755029498,
+        "cam": 0
+      },
+      {
+        "wave": 8,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.7083755029498,
+        "cam": 0
+      },
+      {
+        "wave": 9,
+        "seconds": 0.8666666666666667,
+        "playerX": 89.7083755029498,
+        "cam": 0
+      }
+    ]
+  },
+  {
+    "name": "webkit 8 walk frames",
+    "pass": true,
+    "data": [
+      {
+        "x": 302.5113971715665,
+        "frame": 0
+      },
+      {
+        "x": 308.15855592748045,
+        "frame": 0
+      },
+      {
+        "x": 308.6617285620347,
+        "frame": 0
+      },
+      {
+        "x": 309.6953814176888,
+        "frame": 0
+      },
+      {
+        "x": 313.21928759162114,
+        "frame": 0
+      },
+      {
+        "x": 317.75897609283635,
+        "frame": 0
+      },
+      {
+        "x": 322.70392945297897,
+        "frame": 1
+      },
+      {
+        "x": 326.8353043533544,
+        "frame": 1
+      },
+      {
+        "x": 331.8875664370142,
+        "frame": 1
+      },
+      {
+        "x": 337.5608814127486,
+        "frame": 1
+      },
+      {
+        "x": 342.3497710418629,
+        "frame": 1
+      },
+      {
+        "x": 347.44315348681266,
+        "frame": 2
+      }
+    ]
+  },
+  {
+    "name": "webkit walk stops",
+    "pass": true
+  },
+  {
+    "name": "webkit no runtime errors",
+    "pass": true,
+    "data": []
+  },
+  {
+    "name": "opening natural completion",
+    "pass": true
+  },
+  {
+    "name": "opening Escape skip",
+    "pass": true
+  }
+]

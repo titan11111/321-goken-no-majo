@@ -1,7 +1,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const Store={get(k,d){try{return localStorage.getItem('tg.321.'+k)??d}catch{return d}},set(k,v){try{localStorage.setItem('tg.321.'+k,String(v))}catch{}}};
-const Settings={mute:Store.get('mute','0')==='1',handed:Store.get('handed','right'),reduced:Store.get('reduced',matchMedia('(prefers-reduced-motion: reduce)').matches?'1':'0')==='1',quality:Store.get('quality','auto'),sensitivity:+Store.get('sensitivity','1')||1};
+const Settings={opening:Store.get('opening','1')!=='0',mute:Store.get('mute','0')==='1',handed:Store.get('handed','right'),reduced:Store.get('reduced',matchMedia('(prefers-reduced-motion: reduce)').matches?'1':'0')==='1',quality:Store.get('quality','auto'),sensitivity:+Store.get('sensitivity','1')||1};
 function applySettings(){document.body.classList.toggle('left-handed',Settings.handed==='left');document.body.classList.toggle('calm',Settings.reduced);$('mute').textContent=Settings.mute?'♪̸':'♪';$('mute').setAttribute('aria-pressed',String(Settings.mute));if(window.Sound)Sound.sync()}
 const Input=(()=>{
  const sources=new Map(),queue=[],pointerSets=[];let ax=0,ay=0,pid=null;const times=[],outcomes={started:0,buffered:0,unavailable:0};

@@ -11,5 +11,5 @@ const Art=(()=>{
   im.onload=()=>{(im.decode?im.decode():Promise.resolve()).catch(()=>{}).then(()=>{ready[name]=true})};
   im.onerror=()=>failed.push(name);im.src=src;
  }
- return{images,ready,bounds,heroFrames,failed};
+ return{images,ready,bounds,heroFrames,walkFrames:baked.walkFrames||[],womenFrames:baked.womenFrames||[],failed};
 })();

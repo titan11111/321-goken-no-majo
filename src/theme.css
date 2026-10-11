@@ -162,3 +162,7 @@ body.ending #hud,body.ending #bossHud,body.ending #combo,body.ending #notice,bod
 #endSkip:active{background:rgba(255,200,120,.3)}
 @media(prefers-reduced-motion:reduce){#ending .bar,#endLine,#endTitle,#endTitle strong,#endTitle i{transition:none!important}#endTitle.show strong{animation:none;background-position:0 0}}
 #endTitle::before{content:"";position:absolute;left:-10%;right:-10%;top:-60%;bottom:-60%;z-index:-1;background:radial-gradient(ellipse at 50% 50%,rgba(14,6,18,.62),transparent 68%)}
+
+/* Added journey scenes: moonlit garden and forbidden library. */
+body[data-area="4"]{--accent:#c2b0ef;--accent-rgb:194,176,239;--accent2:#eee2ff;--deck-hi:#29233a;--deck-lo:#100d1a;--rim:#72628a}
+body[data-area="5"]{--accent:#a5d1a5;--accent-rgb:165,209,165;--accent2:#ecd6a2;--deck-hi:#2e3424;--deck-lo:#10180f;--rim:#7a8860}

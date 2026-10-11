@@ -6,7 +6,11 @@
 <title>剛拳の魔城 — IRON / HEX</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23101716'/%3E%3Cpath d='M20 10h24v14l8 8-8 22H20L12 32l8-8z' fill='%23edb66a'/%3E%3C/svg%3E">
 <style>/* COMMON_CSS */
-/* GAME_CSS */</style></head>
+/* GAME_CSS */</style><meta property="og:title" content="剛拳の魔城 — IRON / HEX">
+<meta property="og:description" content="魔力ゼロの拳で街を救う。8エリア・10戦闘のベルトスクロールアクション。">
+<meta property="og:url" content="https://titan11111.github.io/321-goken-no-majo/">
+<meta property="og:type" content="website"><meta name="twitter:card" content="summary">
+</head>
 <body data-area="0">
 <main id="game-shell">
 <section id="game-stage" aria-label="剛拳の魔城 ゲーム画面">
@@ -15,16 +19,21 @@
  <div class="stageinfo"><span id="areaText">01 / 城外橋</span><b id="scoreText">000000</b></div>
 </header>
 <div id="utility"><button id="mute" aria-label="音を切り替え" title="音を切り替え">♪</button><button id="pause" aria-label="一時停止" title="一時停止">Ⅱ</button></div>
-<div id="screen-wrap"><canvas id="screen" aria-label="魔法をかわし、拳で魔城を攻略するアクションゲーム"></canvas></div>
+<div id="screen-wrap"><canvas tabindex="-1" id="screen" aria-label="魔法をかわし、拳で魔城を攻略するアクションゲーム"></canvas></div>
 <div id="bossHud" class="hidden"><span>魔王 ヴェルグ <small id="bossPhase">THE LAST SPELL</small></span><div><i id="bossFill"></i></div></div>
 <div id="combo" class="hidden"><b id="comboCount">0</b><span>HITS</span><small id="moveName"></small></div>
 <div id="notice" aria-live="polite"></div>
 <div id="title" class="overlay title">
  <div class="edition">TITANS ARCADE <span> / </span> 321</div>
- <div class="title-copy"><div class="eyebrow">魔 力 ゼ ロ の 反 逆 者</div><h1>剛拳<span>の</span>魔城</h1><div class="english">IRON <i>/</i> HEX</div><p>魔法がすべての世界で、<br>最後に残ったのは、この拳だった。</p></div>
+ <div class="title-copy"><div class="eyebrow">魔 力 ゼ ロ の 反 逆 者</div><h1>剛拳<span>の</span>魔城</h1><div class="english">IRON <i>/</i> HEX</div><p>石にされた街を、取り戻す。<br>魔力ゼロの石工が、魔王へ挑む。</p></div>
  <div class="title-actions"><button id="start" class="primary">魔城へ挑む <span>→</span></button><div class="subactions"><button id="practice">鍛錬場</button><button id="guide">遊び方</button><button id="settingsTitle">設定</button></div><div class="bottom-caption">BELT-SCROLL ACTION <span>拳 × 魔法</span></div></div>
 </div>
 <div id="modal" class="overlay hidden"><div class="modal-card"><div class="eyebrow" id="modalLabel">CAMP / 休息</div><h2 id="modalTitle">ひと息、つこう。</h2><div id="modalBody"></div><div id="modalButtons"></div></div></div>
+<div id="opening" class="hidden" data-scene="0" aria-label="物語のオープニング">
+ <div class="intro-top"><span>ILLEGAL TRANSMISSION / 321</span><button id="introSkip" aria-label="オープニングをスキップ">SKIP ▸▸</button></div>
+ <div class="intro-copy" aria-live="polite"><small id="introTag"></small><h2 id="introHead"></h2><p id="introBody"></p></div>
+ <label class="intro-option"><input id="introOff" type="checkbox">次回からオープニングを省略</label><div class="intro-track"><i id="introProgress"></i></div>
+</div>
 <div id="ending" class="hidden" aria-live="polite"><i class="bar top"></i><i class="bar bot"></i><div id="endLine"></div><div id="endTitle"><small>EPILOGUE</small><strong>平和が戻った</strong><i></i><span>PEACE RETURNS</span></div><button id="endSkip" class="hidden" aria-label="エンディングをスキップ">SKIP ▸▸</button></div>
 <div id="chapter" class="hidden"><small id="chapterNum"></small><strong id="chapterName"></strong><span id="chapterSub"></span></div>
 <div id="trainingLabel" class="hidden">鍛錬場 <span>体力無限・全技を試せます</span></div>

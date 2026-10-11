@@ -51,3 +51,30 @@ Every quadrant must be a complete attractive scene edge to edge with continuous 
 ```text
 Cinematic ending backdrop ... SUNRISE after the demon king's defeat: broken dark castle far left, huge golden sun breaking over the horizon with god rays, warm village rooftops and a stone bridge in the middle distance, cherry petals, a clear empty weathered stone road filling the bottom 40%. NO characters, NO text, NO UI.
 ```
+
+## hero-walk.webp（歩行8コマ・2026-10-11改修）
+
+組み込み `image_gen` 使用。既存hero.webpを外見の参照とし、4列×2行の新規歩行シートを生成。背景除去の追加依頼後、RGBAの透明度を確認。1536×1024をcwebp品質88・alpha品質100で変換し、このフォルダのassets/へ保存。実画像の不均一な余白はsrc/art-baked.jsonのwalkFramesで切り出し、腰位置と地面を揃える。立ち・攻撃は従来素材を使用。
+
+生成プロンプト:
+```text
+Create a NEW production game walk-cycle sprite sheet matching the male hero in the reference (reference only, do not copy its incorrect walk poses). Same muscular bearded black-haired stoneworker, torn sleeveless charcoal martial arts vest and trousers, dark crimson belt, white wrist wraps, bare feet. Detailed hand-painted pixel-art style consistent with reference. Exactly EIGHT full-body sprites arranged in a precise 4 columns x 2 rows equally sized grid, all facing RIGHT in side / slight 3-quarter profile, identical height, same pelvis X center in each cell, same floor baseline. No text, labels, shadows, outlines around cells, or grid lines. Fully transparent background. All limbs within their own cell with generous padding. A biomechanically distinct continuous WALK animation, read left to right top row then bottom: 1 left foot far forward right far back contact, 2 down recoil front knee bent, 3 passing feet together right knee lifting forward, 4 up right knee forward lifted left trailing, 5 right foot far forward left far back contact, 6 down recoil opposite leg, 7 passing feet together left knee lifting, 8 up left knee forward right trailing. The passing frames MUST have feet close together under the torso, clearly unlike wide contact frames. Alternate front/back arms opposite legs. Keep head torso size and costume identical. This is an actual eight-frame loop, not eight repeated wide stances. Output wide sheet 3:2 aspect ratio.
+```
+最終編集プロンプト:
+```text
+Remove ALL background from this sprite sheet. Make background true alpha transparent. Preserve all eight characters, same dimensions, positions, detail and poses. No brown color or glow behind sprites, no checkerboard painted into image, no shadows. Strict grid: 4 columns by 2 rows. Keep each character wholly within its own equal cell with at least 16px horizontal transparent padding. This asset must overlay cleanly onto a game scene. Output RGBA transparency.
+```
+
+
+## enemies-women.webp / scenes-journey.webp（2026-10-11拡張）
+
+組み込みimage_genで生成。新規女性3種×3姿勢の透過シートと、街・水路・庭園・禁書庫の4面背景。既存enemies.webp/scenes.webpを絵柄の参照とした。女性素材は隣のキャラクターを切り込まないよう余白を増やす再生成を行い、実画像のアルファ境界を解析してwomenFramesへ保存。WebP品質87（alpha100）／背景品質84。最終保存先はassets/enemies-women.webp、assets/scenes-journey.webp。
+
+### 女性素材・最終編集プロンプト
+```text
+Repack this SAME nine-sprite sheet into a strict 3x3 equal grid on a square transparent RGBA canvas. Preserve the character identities, costumes, style and three pose types. Make ALL sprites 20 percent smaller to provide substantial transparent padding around EVERY figure and weapon. Each character and entire staff/mace must fit strictly inside its own cell, with 24px clear transparent margin on EVERY side including raised staffs; do not let middle-row fire staff cross into middle-column woman's cell. No overlap between figures. Keep all characters at same scale and ground baseline within each cell. Three columns are red female fire mage, silver-haired female ice mage, female armored knight. Rows idle, casting, hurt. No background, no text, no grid lines.
+```
+### 追加背景・生成プロンプト
+```text
+Create FOUR NEW environments matching reference high detail hand-painted dark fantasy belt scrolling beat-em-up backgrounds. EXACT 2x2 atlas, 1536x1024 landscape. Each quadrant a complete scene with no borders, UI, labels or text. Same side-on slightly elevated arcade fighting camera as reference, horizon at 57% of each quadrant, unobstructed horizontal walkable stone foreground occupying bottom 43%. Foreground must be empty so fighters can be drawn later. Top left: PETRIFIED TOWN at dusk, abandoned cobblestone market street, old half timbered houses, broken stall awnings, 3 SMALL stone statues of townspeople in natural daily poses only at rear edges, cold ash, distant castle ominous against amber-gray sky. Top right: UNDERGROUND AQUEDUCT, colossal arches under a castle, blue-green canal behind foreground dry broad stone towpath, wet reflections, chains, water dripping in deep background, turquoise mist, floor empty. Bottom left: MOONLIT GARDEN, castle garden terrace with white roses and overgrown hedges behind stone railing, giant pale moon, gothic spires, violet blue night, silver light pools, broad dry stone terrace empty in foreground. Bottom right: FORBIDDEN LIBRARY, towering ancient bookshelves behind broad empty stone floor, floating books confined to far background, brass astrolabe, warm copper lamps and emerald ward lights, imposing arched vault, clear combat floor. Distinct colour palettes and architecture per quadrant. No alive people, no fighters, no enemies, no monsters, no foreground furniture. Do not repeat reference locations; these are new locations for same world. Painterly detailed premium game art.
+```

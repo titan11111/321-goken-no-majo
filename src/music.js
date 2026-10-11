@@ -1,7 +1,7 @@
 // BGM: one <audio> element whose src is swapped per scene.
 // iOS only lets an element that was started inside a user gesture play later, so a second element per track would stay silent.
 // iOS also ignores element.volume, so loudness is fixed at encode time (all tracks normalised to about -17 LUFS).
-// Scenes: title/ending = iron, area 1 = strike, area 2-3 = lock, boss = standoff.
+// Scenes: title/garden/ending = iron, town/bridge = strike, interiors = lock, boss = standoff.
 const Music=(()=>{
  const FILES={iron:'audio/iron-hour.m4a',strike:'audio/calculated-strike.m4a',lock:'audio/hard-target-lock.m4a',standoff:'audio/longest-standoff.m4a'};
  let el=null,key='iron',on=true,unlocked=false,err='';

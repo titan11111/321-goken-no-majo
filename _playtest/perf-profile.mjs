@@ -10,7 +10,7 @@ await p.waitForFunction(()=>['hero','enemies','scenes'].every(k=>__iron.snapshot
 const loadMS=Date.now()-t0;
 const cdp=await ctx.newCDPSession(p);await cdp.send('Emulation.setCPUThrottlingRate',{rate:throttle});
 await p.locator('#practice').tap();await p.waitForTimeout(500);
-await p.evaluate(()=>{const T=__iron.test,S=T.state;T.beginWave(5);S.chapter=0;document.getElementById('chapter').classList.add('hidden');T.place({hp:120});T.setEnemies([{type:'boss',x:S.cam+700,z:.5},{type:'ember',x:S.cam+560,z:.25},{type:'frost',x:S.cam+520,z:.8},{type:'guard',x:S.cam+380,z:.55}]);
+await p.evaluate(()=>{const T=__iron.test,S=T.state;T.beginWave(__iron.snapshot().waveCount-1);S.chapter=0;document.getElementById('chapter').classList.add('hidden');T.place({hp:120});T.setEnemies([{type:'boss',x:S.cam+700,z:.5},{type:'ember',x:S.cam+560,z:.25},{type:'frost',x:S.cam+520,z:.8},{type:'guard',x:S.cam+380,z:.55}]);
  for(let i=0;i<6;i++)T.shot({x:S.cam+300+i*60,z:.2+i*.12,vx:-5,vz:0,life:99,r:i%2?13:10,col:i%2?'#8edce8':'#ffac72'});S.enemies.forEach(e=>{e.cast=99;e.castTotal=100});});
 await cdp.send('Profiler.enable');await cdp.send('Profiler.start');
 // sustained button mashing + movement

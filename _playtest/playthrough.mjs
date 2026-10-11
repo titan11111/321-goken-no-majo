@@ -1,7 +1,7 @@
 import { chromium } from '../../playwright-test/node_modules/playwright/index.mjs';
 import { writeFile } from 'node:fs/promises';
 const out=new URL('.',import.meta.url).pathname;
-const b=await chromium.launch({headless:true});const p=await b.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.clock.install();await p.goto('http://127.0.0.1:8890/');await p.locator('#start').tap();let keys=new Set(),log=[],seen=new Set(),lastWave=-1,stuck=0,lastX=0;
+const b=await chromium.launch({headless:true});const p=await b.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});const errors=[];p.on('pageerror',e=>errors.push(e.message));await p.clock.install();await p.goto('http://127.0.0.1:8890/');await p.locator('#start').tap();await p.locator('#introSkip').tap();let keys=new Set(),log=[],seen=new Set(),lastWave=-1,stuck=0,lastX=0;
 async function setKeys(next){for(const k of keys)if(!next.has(k))await p.keyboard.up(k);for(const k of next)if(!keys.has(k))await p.keyboard.down(k);keys=next}
 for(let i=0;i<2400;i++){
  const s=await p.evaluate(()=>__iron.snapshot());if(s.mode!=='play'){log.push({tick:i,mode:s.mode,stats:s.stats,wave:s.wave,hp:s.player?.hp,time:s.time});console.log(JSON.stringify(log.at(-1)));break}

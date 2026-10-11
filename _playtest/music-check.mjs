@@ -7,11 +7,13 @@ await p.goto('http://127.0.0.1:8890/?test=1');await p.waitForFunction(()=>__iron
 const m=()=>p.evaluate(()=>__iron.snapshot().music);
 let s=await m();ok('title-before-touch-silent',s.key==='iron'&&s.paused&&!s.unlocked,s);
 await p.mouse.click(195,300);await p.waitForTimeout(1500);s=await m();ok('title-theme-after-first-touch',s.key==='iron'&&!s.paused&&s.time>0.3&&!s.error,s);
-await p.locator('#start').click();await p.waitForTimeout(1800);s=await m();ok('area1-strike',s.key==='strike'&&!s.paused&&s.time>0.3&&!s.error,s);
+await p.locator('#start').click();await p.locator('#introSkip').click();await p.waitForTimeout(1800);s=await m();ok('area1-strike',s.key==='strike'&&!s.paused&&s.time>0.3&&!s.error,s);
 const t1=s.time;await p.waitForTimeout(800);s=await m();ok('time-advances',s.time>t1+.4,{t1,t2:s.time});
-await p.evaluate(()=>__iron.test.beginWave(2));await p.waitForTimeout(1800);s=await m();ok('area2-lock',s.key==='lock'&&!s.paused&&s.time>0.3,s);
-await p.evaluate(()=>__iron.test.beginWave(4));await p.waitForTimeout(300);s=await m();ok('area3-keeps-lock-no-restart',s.key==='lock'&&s.time>1.5,s);
-await p.evaluate(()=>__iron.test.beginWave(5));await p.waitForTimeout(1800);s=await m();ok('boss-standoff',s.key==='standoff'&&!s.paused&&s.time>0.3,s);
+await p.evaluate(()=>__iron.test.beginWave(3));await p.waitForTimeout(1800);s=await m();ok('aqueduct-lock',s.key==='lock'&&!s.paused&&s.time>0.3,s);
+await p.evaluate(()=>__iron.test.beginWave(4));await p.waitForTimeout(300);s=await m();ok('hall-keeps-lock-no-restart',s.key==='lock'&&s.time>1.5,s);
+await p.evaluate(()=>__iron.test.beginWave(5));await p.waitForTimeout(1800);s=await m();ok('garden-iron',s.key==='iron'&&!s.paused&&s.time>.3,s);
+await p.evaluate(()=>__iron.test.beginWave(6));await p.waitForTimeout(1800);s=await m();ok('library-lock',s.key==='lock'&&!s.paused&&s.time>.3,s);
+await p.evaluate(()=>__iron.test.beginWave(__iron.snapshot().waveCount-1));await p.waitForTimeout(1800);s=await m();ok('boss-standoff',s.key==='standoff'&&!s.paused&&s.time>0.3,s);
 await p.locator('#mute').click();await p.waitForTimeout(300);s=await m();ok('mute-pauses',s.paused,s);
 await p.locator('#mute').click();await p.waitForTimeout(900);s=await m();ok('unmute-resumes',!s.paused,s);
 await p.locator('#pause').click();await p.waitForTimeout(400);s=await m();ok('pause-stops-music',s.paused,s);

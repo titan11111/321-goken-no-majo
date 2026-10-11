@@ -25,3 +25,19 @@ body{display:grid;place-items:center;background:radial-gradient(ellipse at 50% 5
 
 /* Keep vital information readable against the painted sky and torchlight. */
 #game-stage::after{content:"";position:absolute;inset:0 0 auto;height:125px;background:linear-gradient(#071014b8,transparent);pointer-events:none;z-index:1}
+
+/* SF punk opening: story only; skip and preference stay visible throughout. */
+#opening{position:absolute;inset:0;z-index:25;color:#f5f3ec;padding:24px 6%;background:linear-gradient(125deg,#08091422,#15102211);--neon:#49f4ef}
+#opening[data-scene="1"],#opening[data-scene="3"]{--neon:#ff388b}
+.intro-top{display:flex;align-items:center;justify-content:space-between;gap:8px;font:9px monospace;letter-spacing:2px;color:var(--neon)}
+#introSkip{min-height:44px;min-width:90px;border:1px solid var(--neon);background:#080914cc;color:#fff;font:bold 12px monospace;letter-spacing:2px;padding:8px 12px}
+.intro-copy{position:absolute;left:6%;right:5%;top:27%;max-width:750px;transform:skewY(-3deg)}
+#introTag{display:inline-block;background:var(--neon);padding:6px 10px;color:#080914;font:900 11px monospace;letter-spacing:3px}
+#introHead{white-space:pre-line;font:900 clamp(27px,4.2vw,62px)/1.4 sans-serif;letter-spacing:-1px;margin:20px 0;text-shadow:3px 3px #a51b6588}
+#introBody{white-space:pre-line;font:600 clamp(12px,1.2vw,16px)/2 sans-serif;color:#d5dce5;text-shadow:0 2px 4px #000;margin:0}
+#opening[data-scene="4"] #introHead{color:#efff68}#opening[data-scene="4"] #introBody{font-size:25px;letter-spacing:7px;color:var(--neon)}
+.intro-option{position:absolute;bottom:24px;left:6%;display:flex;align-items:center;gap:10px;min-height:44px;font-size:11px;color:#b6b9cc}.intro-option input{accent-color:#49f4ef;width:20px;height:20px}
+.intro-track{position:absolute;left:0;right:0;bottom:0;height:4px;background:#202437}.intro-track i{display:block;height:100%;background:var(--neon);width:0}
+.opening #game-stage{height:100%;flex-basis:100%}.opening #control-deck{display:none!important}.opening #utility{visibility:hidden}
+@media(max-width:600px){.intro-top{font-size:7px;letter-spacing:1px}.intro-copy{top:25%}#introHead{font-size:29px;line-height:1.6}#introBody{font-size:12px;line-height:2}.intro-option{font-size:10px}}
+@media(max-height:500px) and (orientation:landscape){#opening{padding-top:8px}.intro-copy{top:23%}#introHead{font-size:27px;line-height:1.25;margin:12px 0}#introBody{font-size:11px;line-height:1.6}.intro-option{bottom:8px}#opening[data-scene="4"] #introBody{font-size:18px}}

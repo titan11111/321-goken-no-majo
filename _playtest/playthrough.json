@@ -7,19 +7,23 @@
     2,
     3,
     4,
-    5
+    5,
+    6,
+    7,
+    8,
+    9
   ],
   "stats": {
-    "hits": 94,
-    "damage": 38,
-    "reflections": 4,
-    "dodges": 8,
-    "maxCombo": 14,
-    "kills": 17
+    "hits": 96,
+    "damage": 22,
+    "reflections": 3,
+    "dodges": 3,
+    "maxCombo": 90,
+    "kills": 27
   },
-  "hp": 82,
-  "time": 33.687999999998496,
-  "score": 37979,
+  "hp": 98,
+  "time": 18.119999999998935,
+  "score": 49289,
   "moves": [
     "左ジャブ",
     "右ストレート",
@@ -33,53 +37,77 @@
     {
       "wave": 0,
       "hp": 120,
-      "time": 0.173,
+      "time": 0,
       "score": 0
     },
     {
       "wave": 1,
       "hp": 120,
-      "time": 3.628000000000003,
-      "score": 1740
+      "time": 1.3580000000000005,
+      "score": 2240
     },
     {
       "wave": 2,
       "hp": 120,
-      "time": 6.620000000000006,
-      "score": 5210
+      "time": 2.2220000000000013,
+      "score": 4685
     },
     {
       "wave": 3,
       "hp": 120,
-      "time": 10.075999999999851,
-      "score": 8635
+      "time": 3.086,
+      "score": 7870
     },
     {
       "wave": 4,
       "hp": 120,
-      "time": 13.168999999999613,
-      "score": 12630
+      "time": 3.95,
+      "score": 10260
     },
     {
       "wave": 5,
       "hp": 120,
-      "time": 16.67099999999934,
-      "score": 16550
+      "time": 5.15,
+      "score": 13380
     },
     {
-      "tick": 263,
+      "wave": 6,
+      "hp": 120,
+      "time": 6.206000000000003,
+      "score": 16495
+    },
+    {
+      "wave": 7,
+      "hp": 120,
+      "time": 7.262000000000005,
+      "score": 19600
+    },
+    {
+      "wave": 8,
+      "hp": 120,
+      "time": 8.157999999999987,
+      "score": 23605
+    },
+    {
+      "wave": 9,
+      "hp": 120,
+      "time": 9.021999999999899,
+      "score": 27595
+    },
+    {
+      "tick": 196,
       "mode": "clear",
       "stats": {
-        "hits": 94,
-        "damage": 38,
-        "reflections": 4,
-        "dodges": 8,
-        "maxCombo": 14,
-        "kills": 17
+        "hits": 96,
+        "damage": 22,
+        "reflections": 3,
+        "dodges": 3,
+        "maxCombo": 90,
+        "kills": 27
       },
-      "wave": 5,
-      "hp": 82,
-      "time": 33.687999999998496
+      "wave": 9,
+      "hp": 98,
+      "time": 18.119999999998935
     }
   ]
 }
