@@ -1,5 +1,13 @@
 # 検証記録 — 剛拳の魔城
 
+## 2026-10-11 追記：軽量化・BGM・魔法弾（index.html＋audio/）
+
+- 同一の重い場面（魔王＋術師3体・詠唱中・魔法弾連射）をChromium電話画面エミュレーション＋CPU制限4倍で6秒計測：**改修前 28.7FPS・50ms超のフレーム20/173・読込1,731ms → 改修後 57.3FPS・50ms超0/344・読込329ms**（`_playtest/perf-profile.mjs`、結果 perf-before.json / perf-after2.json）。ソフトウェア描画の目安であり、iPhone実機のFPSではない。
+- 既存検査の再実行：verify 29/29 PASS、input-check 7/7 PASS、immediate-input（Chromium/WebKit）PASS、painted-check 8/8 PASS、通しプレイ（キー操作のみ）で魔王撃破・エンディング到達、ハーネス `_tools/game-harness.sh` RESULT PASS（通信量6.18MB）。
+- BGM（`_playtest/music-check.mjs`、WebKit）：13/13 PASS。初回タッチ前は無音→タッチで曲開始→区間ごとに曲が切替（同じ曲の区間では再スタートしない）→ミュートで停止・解除で再開→ポーズで停止・再開→タイトルへ戻ると主題曲。再生位置が進むことまで確認。**実際の聴感、iPhone実機での再生、曲と場面の相性は未確認。**
+- 魔法弾の見た目はChromiumのスクリーンショット（`_playtest/fx-*.png`、`seq-*.png`）で確認。実機の発色・GPU負荷は未確認。
+- フォルダ合計14.80MB（20MB鉄則内）。index.htmlは4.68MB、audio/が7.1MB。HTML単体ではBGMが鳴らない。
+
 検証日：2026-10-11（JST）。成果物：index.html（4,659,825 bytes、約4.7MB）。
 SHA-256: `ae77e11f639ef0cbe36e0c3fc6707de44ef60b00bd028602c291afbda3bf4dce`
 

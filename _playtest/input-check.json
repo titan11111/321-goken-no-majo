@@ -31,14 +31,14 @@
   ],
   "metrics": {
     "outcomes": {
-      "started": 2,
-      "buffered": 19,
+      "started": 1,
+      "buffered": 20,
       "unavailable": 0
     },
     "samples": 21,
-    "mean": 0.023809523898221198,
+    "mean": 0.08571428583846205,
     "p95": 0.10000000149011612,
-    "max": 0.30000000074505806
+    "max": 1.300000000745058
   },
   "fps": 60,
   "zoom": 1,

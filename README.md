@@ -2,7 +2,7 @@
 
 魔力ゼロの石工ガルドが、魔王ヴェルグの城へ挑むベルトスクロールアクション。
 
-**index.htmlだけで動作します。** ブラウザで開くか、Webサーバーから配信してください。外部ファイル、通信、インストールは不要です。iPhoneはSafariでのHTTP配信を推奨します。
+**index.html（画像同梱）と audio/ フォルダ（BGM 4曲・約7MB）で動作します。** この2つを同じ場所に置いてブラウザで開くか、Webサーバーから配信してください。通信・インストールは不要。index.html単体でも遊べますが、BGMは鳴りません。iPhoneはSafariでのHTTP配信を推奨します。
 
 ## 操作
 
@@ -31,5 +31,7 @@
 - ARTWORK.md：生成方法・採用素材・最終プロンプト
 - LEARNINGS.md：検査で見つけた問題と修正
 - src/belt-core.js：抽出したベルトスクロールの基盤
+- src/fx.js：魔法弾・詠唱・着弾・光柱の描画（スプライト事前生成）／src/music.js：BGM切替
+- src/art-baked.json：画像の切り出し範囲（起動時の計測を廃止し、ビルド時に固定。再生成は _playtest/bake-art.mjs）
 
 編集はsrc/、成果物はindex.html。親リポジトリの共通CSSがある環境で `python3 build.py` を実行すると再生成できます。

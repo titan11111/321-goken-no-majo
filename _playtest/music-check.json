@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-10T23:59:13.406Z",
+  "results": [
+    {
+      "name": "title-before-touch-silent",
+      "pass": true,
+      "evidence": {
+        "key": "iron",
+        "on": true,
+        "unlocked": false,
+        "paused": true,
+        "time": 0,
+        "duration": 0,
+        "error": ""
+      }
+    },
+    {
+      "name": "title-theme-after-first-touch",
+      "pass": true,
+      "evidence": {
+        "key": "iron",
+        "on": true,
+        "unlocked": true,
+        "paused": false,
+        "time": 1.2815206503332313,
+        "duration": 177.262,
+        "error": ""
+      }
+    },
+    {
+      "name": "area1-strike",
+      "pass": true,
+      "evidence": {
+        "key": "strike",
+        "on": true,
+        "unlocked": true,
+        "paused": false,
+        "time": 1.737940909000665,
+        "duration": 180.745,
+        "error": ""
+      }
+    },
+    {
+      "name": "time-advances",
+      "pass": true,
+      "evidence": {
+        "t1": 1.737940909000665,
+        "t2": 2.544344960333791
+      }
+    },
+    {
+      "name": "area2-lock",
+      "pass": true,
+      "evidence": {
+        "key": "lock",
+        "on": true,
+        "unlocked": true,
+        "paused": false,
+        "time": 1.7155336603335962,
+        "duration": 179.258,
+        "error": ""
+      }
+    },
+    {
+      "name": "area3-keeps-lock-no-restart",
+      "pass": true,
+      "evidence": {
+        "key": "lock",
+        "on": true,
+        "unlocked": true,
+        "paused": false,
+        "time": 2.022013952666458,
+        "duration": 179.258,
+        "error": ""
+      }
+    },
+    {
+      "name": "boss-standoff",
+      "pass": true,
+      "evidence": {
+        "key": "standoff",
+        "on": true,
+        "unlocked": true,
+        "paused": false,
+        "time": 1.7217643079992417,
+        "duration": 179.63,
+        "error": ""
+      }
+    },
+    {
+      "name": "mute-pauses",
+      "pass": true,
+      "evidence": {
+        "key": "standoff",
+        "on": true,
+        "unlocked": true,
+        "paused": true,
+        "time": 1.7567709746662008,
+        "duration": 179.63,
+        "error": ""
+      }
+    },
+    {
+      "name": "unmute-resumes",
+      "pass": true,
+      "evidence": {
+        "key": "standoff",
+        "on": true,
+        "unlocked": true,
+        "paused": false,
+        "time": 2.6896189283347476,
+        "duration": 179.63,
+        "error": ""
+      }
+    },
+    {
+      "name": "pause-stops-music",
+      "pass": true,
+      "evidence": {
+        "key": "standoff",
+        "on": false,
+        "unlocked": true,
+        "paused": true,
+        "time": 2.7227493033341363,
+        "duration": 179.63,
+        "error": ""
+      }
+    },
+    {
+      "name": "resume-restarts-music",
+      "pass": true,
+      "evidence": {
+        "key": "standoff",
+        "on": true,
+        "unlocked": true,
+        "paused": false,
+        "time": 3.6589785080003967,
+        "duration": 179.63,
+        "error": ""
+      }
+    },
+    {
+      "name": "back-to-title-iron",
+      "pass": true,
+      "evidence": {
+        "key": "iron",
+        "on": true,
+        "unlocked": true,
+        "paused": false,
+        "time": 1.4406837633335068,
+        "duration": 177.262,
+        "error": ""
+      }
+    },
+    {
+      "name": "no-runtime-errors",
+      "pass": true,
+      "evidence": []
+    }
+  ]
+}

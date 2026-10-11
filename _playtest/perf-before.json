@@ -1,0 +1,70 @@
+{
+ "label": "before",
+ "throttle": 4,
+ "loadMS": 1731,
+ "frames": 173,
+ "meanMS": 34.85,
+ "p95": 50.6,
+ "max": 66.7,
+ "over50": 20,
+ "fpsAvg": 28.7,
+ "errors": [],
+ "top": [
+  [
+   "(program):-1:-1",
+   "6212ms"
+  ],
+  [
+   "drawImage:-1:-1",
+   "37ms"
+  ],
+  [
+   "update:470:15",
+   "35ms"
+  ],
+  [
+   "frame:639:14",
+   "24ms"
+  ],
+  [
+   "render:621:15",
+   "15ms"
+  ],
+  [
+   "line:491:13",
+   "13ms"
+  ],
+  [
+   "hud:638:12",
+   "10ms"
+  ],
+  [
+   "(garbage collector):-1:-1",
+   "9ms"
+  ],
+  [
+   "mage:523:13",
+   "8ms"
+  ],
+  [
+   "isURL:49:14",
+   "8ms"
+  ],
+  [
+   "rune:494:13",
+   "8ms"
+  ],
+  [
+   "fill:-1:-1",
+   "7ms"
+  ],
+  [
+   "ellipse:-1:-1",
+   "7ms"
+  ],
+  [
+   "background:536:19",
+   "6ms"
+  ]
+ ]
+}

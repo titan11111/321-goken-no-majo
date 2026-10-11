@@ -1,0 +1,21 @@
+// BGM scene routing + mute + pause, in WebKit (macOS WebKit decodes AAC/m4a; Playwright's Chromium has no AAC).
+import {webkit} from '../../playwright-test/node_modules/playwright/index.mjs';
+import {writeFile} from 'node:fs/promises';
+const out=new URL('.',import.meta.url).pathname,res=[];const ok=(name,pass,evidence)=>{res.push({name,pass:!!pass,evidence});console.log(pass?'PASS':'FAIL',name,JSON.stringify(evidence))};
+const b=await webkit.launch();const ctx=await b.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});const p=await ctx.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));
+await p.goto('http://127.0.0.1:8890/?test=1');await p.waitForFunction(()=>__iron.snapshot().art.ready.hero);
+const m=()=>p.evaluate(()=>__iron.snapshot().music);
+let s=await m();ok('title-before-touch-silent',s.key==='iron'&&s.paused&&!s.unlocked,s);
+await p.mouse.click(195,300);await p.waitForTimeout(1500);s=await m();ok('title-theme-after-first-touch',s.key==='iron'&&!s.paused&&s.time>0.3&&!s.error,s);
+await p.locator('#start').click();await p.waitForTimeout(1800);s=await m();ok('area1-strike',s.key==='strike'&&!s.paused&&s.time>0.3&&!s.error,s);
+const t1=s.time;await p.waitForTimeout(800);s=await m();ok('time-advances',s.time>t1+.4,{t1,t2:s.time});
+await p.evaluate(()=>__iron.test.beginWave(2));await p.waitForTimeout(1800);s=await m();ok('area2-lock',s.key==='lock'&&!s.paused&&s.time>0.3,s);
+await p.evaluate(()=>__iron.test.beginWave(4));await p.waitForTimeout(300);s=await m();ok('area3-keeps-lock-no-restart',s.key==='lock'&&s.time>1.5,s);
+await p.evaluate(()=>__iron.test.beginWave(5));await p.waitForTimeout(1800);s=await m();ok('boss-standoff',s.key==='standoff'&&!s.paused&&s.time>0.3,s);
+await p.locator('#mute').click();await p.waitForTimeout(300);s=await m();ok('mute-pauses',s.paused,s);
+await p.locator('#mute').click();await p.waitForTimeout(900);s=await m();ok('unmute-resumes',!s.paused,s);
+await p.locator('#pause').click();await p.waitForTimeout(400);s=await m();ok('pause-stops-music',s.paused,s);
+await p.getByText('つづける').click();await p.waitForTimeout(900);s=await m();ok('resume-restarts-music',!s.paused,s);
+await p.locator('#pause').click();await p.waitForTimeout(300);await p.getByText('タイトルへ').click();await p.waitForTimeout(1500);s=await m();ok('back-to-title-iron',s.key==='iron'&&!s.paused,s);
+ok('no-runtime-errors',errors.length===0,errors);
+await b.close();await writeFile(out+'music-check.json',JSON.stringify({date:new Date().toISOString(),results:res},null,2));if(res.some(x=>!x.pass))process.exitCode=1;

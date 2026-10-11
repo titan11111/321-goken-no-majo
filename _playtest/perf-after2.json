@@ -1,0 +1,70 @@
+{
+ "label": "after2",
+ "throttle": 4,
+ "loadMS": 329,
+ "frames": 344,
+ "meanMS": 17.45,
+ "p95": 31.6,
+ "max": 35.2,
+ "over50": 0,
+ "fpsAvg": 57.3,
+ "errors": [],
+ "top": [
+  [
+   "(program):-1:-1",
+   "5874ms"
+  ],
+  [
+   "drawImage:-1:-1",
+   "107ms"
+  ],
+  [
+   "(idle):-1:-1",
+   "57ms"
+  ],
+  [
+   "save:-1:-1",
+   "21ms"
+  ],
+  [
+   "render:710:15",
+   "19ms"
+  ],
+  [
+   "(garbage collector):-1:-1",
+   "19ms"
+  ],
+  [
+   "frame:735:14",
+   "18ms"
+  ],
+  [
+   "update:559:15",
+   "11ms"
+  ],
+  [
+   "background:625:19",
+   "11ms"
+  ],
+  [
+   "fillRect:-1:-1",
+   "9ms"
+  ],
+  [
+   "mage:612:13",
+   "9ms"
+  ],
+  [
+   "shot:421:14",
+   "7ms"
+  ],
+  [
+   "rune:463:14",
+   "6ms"
+  ],
+  [
+   "fill:-1:-1",
+   "4ms"
+  ]
+ ]
+}

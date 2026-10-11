@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-10T23:24:04.891Z",
+  "date": "2026-10-10T23:58:30.625Z",
   "results": [
     {
       "name": "chromium-painted-assets-decoded",
@@ -12,9 +12,9 @@
         },
         "failed": [],
         "heroPose": {
-          "frame": 1,
+          "frame": 0,
           "shift": 0,
-          "bob": 0.5392984649470216
+          "bob": 0.5568573462101067
         }
       }
     },
@@ -79,7 +79,7 @@
         "heroPose": {
           "frame": 1,
           "shift": 0,
-          "bob": 0.3519354980191149
+          "bob": 0.294461866296855
         }
       }
     },
