@@ -31,16 +31,16 @@
   ],
   "metrics": {
     "outcomes": {
-      "started": 4,
-      "buffered": 17,
+      "started": 1,
+      "buffered": 20,
       "unavailable": 0
     },
     "samples": 21,
-    "mean": 0.07142857151726882,
-    "p95": 0.30000000074505806,
-    "max": 0.6999999992549419
+    "mean": 0.03333333329785438,
+    "p95": 0.09999999962747097,
+    "max": 0.599999999627471
   },
-  "fps": 56,
+  "fps": 60,
   "zoom": 1,
   "note": "Input metric is event-handler to simulation processing on desktop Chromium emulating a phone; not touch-to-photon or physical iPhone latency."
 }
