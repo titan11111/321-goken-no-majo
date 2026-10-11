@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-11T01:07:10.724Z",
+  "date": "2026-10-11T01:10:31.556Z",
   "results": [
     {
       "name": "start",
@@ -33,6 +33,11 @@
     },
     {
       "name": "reflect-timing-grades",
+      "pass": true,
+      "evidence": ""
+    },
+    {
+      "name": "hero-kiai-shout",
       "pass": true,
       "evidence": ""
     },
@@ -98,7 +103,7 @@
       "pass": true,
       "evidence": {
         "x0": 294.39459915611815,
-        "x1": 347.54344743491646
+        "x1": 351.85683479140533
       }
     },
     {
@@ -193,7 +198,7 @@
         ],
         "audio": "running",
         "errors": [],
-        "fps": 50
+        "fps": 46
       }
     }
   ]
