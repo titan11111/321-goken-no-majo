@@ -1,5 +1,7 @@
 from pathlib import Path
-import base64,json
+import base64,json,sys
+if '--force' not in sys.argv:
+    sys.exit('src/ is stale: index.html has been edited directly since 275dbfa. Running this overwrites index.html with old code. Pass --force only after syncing src/.')
 root=Path(__file__).resolve().parent
 common=(root.parent/'titans-ui/src/components/Controls/fc-ios-controller.css').read_text()
 shell=(root/'src/shell.html').read_text()

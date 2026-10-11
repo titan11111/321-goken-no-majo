@@ -1,0 +1,629 @@
+[
+  {
+    "name": "chromium stonework starts",
+    "pass": true
+  },
+  {
+    "name": "chromium no hammer/chisel labels",
+    "pass": true
+  },
+  {
+    "name": "chromium jab carves top row by damage",
+    "pass": true,
+    "data": [
+      12,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "chromium kick carves bottom row",
+    "pass": true,
+    "data": [
+      12,
+      0,
+      0,
+      0,
+      0,
+      0,
+      16,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "chromium held punch chains carve rows 0-1",
+    "pass": true,
+    "data": {
+      "cells": [
+        40,
+        40,
+        0,
+        32,
+        0,
+        0,
+        16,
+        0,
+        0
+      ],
+      "hits": 7,
+      "progress": 0.35555555555555557,
+      "seconds": 2.2834999999999996,
+      "over": 8,
+      "moves": [
+        "左ジャブ",
+        "右キック",
+        "右ストレート",
+        "両手パンチ"
+      ],
+      "judge": null
+    }
+  },
+  {
+    "name": "chromium carving complete",
+    "pass": true,
+    "data": {
+      "cells": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "hits": 18,
+      "progress": 1,
+      "seconds": 6.315800000000015,
+      "over": 72,
+      "moves": [
+        "左ジャブ",
+        "右キック",
+        "右ストレート",
+        "両手パンチ",
+        "左キック",
+        "ドロップキック"
+      ],
+      "judge": {
+        "t": 0,
+        "scores": [
+          10,
+          10,
+          8
+        ],
+        "shown": 0,
+        "tick": -1,
+        "verdict": false,
+        "pass": true
+      }
+    }
+  },
+  {
+    "name": "chromium herb only when all three ≥8",
+    "pass": true,
+    "data": {
+      "scores": [
+        10,
+        10,
+        8
+      ],
+      "herbs": 1,
+      "seconds": 6.315800000000015,
+      "over": 72,
+      "moves": [
+        "左ジャブ",
+        "右キック",
+        "右ストレート",
+        "両手パンチ",
+        "左キック",
+        "ドロップキック"
+      ]
+    }
+  },
+  {
+    "name": "chromium herb starts grow animation",
+    "pass": true,
+    "data": {
+      "used": true,
+      "fx": true,
+      "mode": "play"
+    }
+  },
+  {
+    "name": "chromium giant active 30s",
+    "pass": true,
+    "data": {
+      "giant": 29.850100000000015
+    }
+  },
+  {
+    "name": "chromium giant reflects magic",
+    "pass": true,
+    "data": {
+      "hp": 120,
+      "after": 120,
+      "reflections": 1,
+      "back": [
+        620
+      ]
+    }
+  },
+  {
+    "name": "chromium giant nullifies ground magic",
+    "pass": true,
+    "data": {
+      "hp": 120,
+      "after": 120
+    }
+  },
+  {
+    "name": "chromium shrink animation after timeout",
+    "pass": true
+  },
+  {
+    "name": "chromium back to normal size",
+    "pass": true
+  },
+  {
+    "name": "chromium enemy defence 1.5x (30 -> 20)",
+    "pass": true,
+    "data": {
+      "def": 20
+    }
+  },
+  {
+    "name": "chromium boss cinematic starts",
+    "pass": true
+  },
+  {
+    "name": "chromium cinematic ends into fight",
+    "pass": true
+  },
+  {
+    "name": "chromium cinematic skippable",
+    "pass": true
+  },
+  {
+    "name": "chromium boss death sequence",
+    "pass": true
+  },
+  {
+    "name": "chromium ending reached after death sequence",
+    "pass": true
+  },
+  {
+    "name": "chromium ending BGM bed requested once",
+    "pass": true
+  },
+  {
+    "name": "chromium runtime errors zero",
+    "pass": true,
+    "data": []
+  },
+  {
+    "name": "webkit stonework starts",
+    "pass": true
+  },
+  {
+    "name": "webkit no hammer/chisel labels",
+    "pass": true
+  },
+  {
+    "name": "webkit jab carves top row by damage",
+    "pass": true,
+    "data": [
+      12,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "webkit kick carves bottom row",
+    "pass": true,
+    "data": [
+      12,
+      0,
+      0,
+      0,
+      0,
+      0,
+      16,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "webkit held punch chains carve rows 0-1",
+    "pass": true,
+    "data": {
+      "cells": [
+        40,
+        40,
+        0,
+        32,
+        0,
+        0,
+        16,
+        0,
+        0
+      ],
+      "hits": 7,
+      "progress": 0.35555555555555557,
+      "seconds": 2.1889999999999974,
+      "over": 8,
+      "moves": [
+        "左ジャブ",
+        "右キック",
+        "右ストレート",
+        "両手パンチ"
+      ],
+      "judge": null
+    }
+  },
+  {
+    "name": "webkit carving complete",
+    "pass": true,
+    "data": {
+      "cells": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "hits": 18,
+      "progress": 1,
+      "seconds": 6.206000000000009,
+      "over": 72,
+      "moves": [
+        "左ジャブ",
+        "右キック",
+        "右ストレート",
+        "両手パンチ",
+        "左キック",
+        "ドロップキック"
+      ],
+      "judge": {
+        "t": 0,
+        "scores": [
+          10,
+          10,
+          8
+        ],
+        "shown": 0,
+        "tick": -1,
+        "verdict": false,
+        "pass": true
+      }
+    }
+  },
+  {
+    "name": "webkit herb only when all three ≥8",
+    "pass": true,
+    "data": {
+      "scores": [
+        10,
+        10,
+        8
+      ],
+      "herbs": 1,
+      "seconds": 6.206000000000009,
+      "over": 72,
+      "moves": [
+        "左ジャブ",
+        "右キック",
+        "右ストレート",
+        "両手パンチ",
+        "左キック",
+        "ドロップキック"
+      ]
+    }
+  },
+  {
+    "name": "webkit herb starts grow animation",
+    "pass": true,
+    "data": {
+      "used": true,
+      "fx": true,
+      "mode": "play"
+    }
+  },
+  {
+    "name": "webkit giant active 30s",
+    "pass": true,
+    "data": {
+      "giant": 29.849999999999998
+    }
+  },
+  {
+    "name": "webkit giant reflects magic",
+    "pass": true,
+    "data": {
+      "hp": 120,
+      "after": 120,
+      "reflections": 1,
+      "back": [
+        620
+      ]
+    }
+  },
+  {
+    "name": "webkit giant nullifies ground magic",
+    "pass": true,
+    "data": {
+      "hp": 120,
+      "after": 120
+    }
+  },
+  {
+    "name": "webkit shrink animation after timeout",
+    "pass": true
+  },
+  {
+    "name": "webkit back to normal size",
+    "pass": true
+  },
+  {
+    "name": "webkit enemy defence 1.5x (30 -> 20)",
+    "pass": true,
+    "data": {
+      "def": 20
+    }
+  },
+  {
+    "name": "webkit boss cinematic starts",
+    "pass": true
+  },
+  {
+    "name": "webkit cinematic ends into fight",
+    "pass": true
+  },
+  {
+    "name": "webkit cinematic skippable",
+    "pass": true
+  },
+  {
+    "name": "webkit boss death sequence",
+    "pass": true
+  },
+  {
+    "name": "webkit ending reached after death sequence",
+    "pass": true
+  },
+  {
+    "name": "webkit ending BGM bed requested once",
+    "pass": true
+  },
+  {
+    "name": "webkit runtime errors zero",
+    "pass": true,
+    "data": []
+  },
+  {
+    "name": "chromium-land stonework starts",
+    "pass": true
+  },
+  {
+    "name": "chromium-land no hammer/chisel labels",
+    "pass": true
+  },
+  {
+    "name": "chromium-land jab carves top row by damage",
+    "pass": true,
+    "data": [
+      12,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "chromium-land kick carves bottom row",
+    "pass": true,
+    "data": [
+      12,
+      0,
+      0,
+      0,
+      0,
+      0,
+      16,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "chromium-land held punch chains carve rows 0-1",
+    "pass": true,
+    "data": {
+      "cells": [
+        40,
+        40,
+        0,
+        32,
+        0,
+        0,
+        16,
+        0,
+        0
+      ],
+      "hits": 7,
+      "progress": 0.35555555555555557,
+      "seconds": 2.3333999999999984,
+      "over": 8,
+      "moves": [
+        "左ジャブ",
+        "右キック",
+        "右ストレート",
+        "両手パンチ"
+      ],
+      "judge": null
+    }
+  },
+  {
+    "name": "chromium-land carving complete",
+    "pass": true,
+    "data": {
+      "cells": [
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40,
+        40
+      ],
+      "hits": 18,
+      "progress": 1,
+      "seconds": 6.384300000000016,
+      "over": 72,
+      "moves": [
+        "左ジャブ",
+        "右キック",
+        "右ストレート",
+        "両手パンチ",
+        "左キック",
+        "ドロップキック"
+      ],
+      "judge": {
+        "t": 0,
+        "scores": [
+          10,
+          10,
+          8
+        ],
+        "shown": 0,
+        "tick": -1,
+        "verdict": false,
+        "pass": true
+      }
+    }
+  },
+  {
+    "name": "chromium-land herb only when all three ≥8",
+    "pass": true,
+    "data": {
+      "scores": [
+        10,
+        10,
+        8
+      ],
+      "herbs": 1,
+      "seconds": 6.384300000000016,
+      "over": 72,
+      "moves": [
+        "左ジャブ",
+        "右キック",
+        "右ストレート",
+        "両手パンチ",
+        "左キック",
+        "ドロップキック"
+      ]
+    }
+  },
+  {
+    "name": "chromium-land herb starts grow animation",
+    "pass": true,
+    "data": {
+      "used": true,
+      "fx": true,
+      "mode": "play"
+    }
+  },
+  {
+    "name": "chromium-land giant active 30s",
+    "pass": true,
+    "data": {
+      "giant": 29.81740000000003
+    }
+  },
+  {
+    "name": "chromium-land giant reflects magic",
+    "pass": true,
+    "data": {
+      "hp": 120,
+      "after": 120,
+      "reflections": 1,
+      "back": [
+        620
+      ]
+    }
+  },
+  {
+    "name": "chromium-land giant nullifies ground magic",
+    "pass": true,
+    "data": {
+      "hp": 120,
+      "after": 120
+    }
+  },
+  {
+    "name": "chromium-land shrink animation after timeout",
+    "pass": true
+  },
+  {
+    "name": "chromium-land back to normal size",
+    "pass": true
+  },
+  {
+    "name": "chromium-land enemy defence 1.5x (30 -> 20)",
+    "pass": true,
+    "data": {
+      "def": 20
+    }
+  },
+  {
+    "name": "chromium-land boss cinematic starts",
+    "pass": true
+  },
+  {
+    "name": "chromium-land cinematic ends into fight",
+    "pass": true
+  },
+  {
+    "name": "chromium-land cinematic skippable",
+    "pass": true
+  },
+  {
+    "name": "chromium-land boss death sequence",
+    "pass": true
+  },
+  {
+    "name": "chromium-land ending reached after death sequence",
+    "pass": true
+  },
+  {
+    "name": "chromium-land ending BGM bed requested once",
+    "pass": true
+  },
+  {
+    "name": "chromium-land runtime errors zero",
+    "pass": true,
+    "data": []
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "phone",
+    "errors": [],
+    "title": true,
+    "defeat": true,
+    "ending": true,
+    "skip": true
+  },
+  {
+    "name": "landscape",
+    "errors": [],
+    "title": true,
+    "defeat": true,
+    "ending": true,
+    "skip": true
+  },
+  {
+    "name": "desktop",
+    "errors": [],
+    "title": true,
+    "defeat": true,
+    "ending": true,
+    "skip": true
+  }
+]

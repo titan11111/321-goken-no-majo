@@ -1,0 +1,750 @@
+[
+  {
+    "name": "chromium 32 waves",
+    "pass": true
+  },
+  {
+    "name": "chromium scroll both directions",
+    "pass": true,
+    "data": {
+      "initial": 0,
+      "right": 310.4907059065058,
+      "left": 0.9493739021452863
+    }
+  },
+  {
+    "name": "chromium 4 formations each area",
+    "pass": true,
+    "data": [
+      {
+        "wave": 0,
+        "area": 0,
+        "start": 0,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 1,
+        "area": 0,
+        "start": 0,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 2,
+        "area": 0,
+        "start": 0,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 3,
+        "area": 0,
+        "start": 0,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 4,
+        "area": 1,
+        "start": 741.8009478672985,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 5,
+        "area": 1,
+        "start": 741.8009478672985,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 6,
+        "area": 1,
+        "start": 741.8009478672985,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 7,
+        "area": 1,
+        "start": 741.8009478672985,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 8,
+        "area": 2,
+        "start": 1483.601895734597,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 9,
+        "area": 2,
+        "start": 1483.601895734597,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 10,
+        "area": 2,
+        "start": 1483.601895734597,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 11,
+        "area": 2,
+        "start": 1483.601895734597,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 12,
+        "area": 3,
+        "start": 2225.4028436018957,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 13,
+        "area": 3,
+        "start": 2225.4028436018957,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 14,
+        "area": 3,
+        "start": 2225.4028436018957,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 15,
+        "area": 3,
+        "start": 2225.4028436018957,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 16,
+        "area": 4,
+        "start": 2967.203791469194,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 17,
+        "area": 4,
+        "start": 2967.203791469194,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 18,
+        "area": 4,
+        "start": 2967.203791469194,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 19,
+        "area": 4,
+        "start": 2967.203791469194,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 20,
+        "area": 5,
+        "start": 3709.0047393364925,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 21,
+        "area": 5,
+        "start": 3709.0047393364925,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 22,
+        "area": 5,
+        "start": 3709.0047393364925,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 23,
+        "area": 5,
+        "start": 3709.0047393364925,
+        "width": 655.5450236966824,
+        "count": 4
+      },
+      {
+        "wave": 24,
+        "area": 6,
+        "start": 4450.8056872037905,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 25,
+        "area": 6,
+        "start": 4450.8056872037905,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 26,
+        "area": 6,
+        "start": 4450.8056872037905,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 27,
+        "area": 6,
+        "start": 4450.8056872037905,
+        "width": 655.5450236966824,
+        "count": 4
+      },
+      {
+        "wave": 28,
+        "area": 7,
+        "start": 5192.606635071089,
+        "width": 655.5450236966824,
+        "count": 2
+      },
+      {
+        "wave": 29,
+        "area": 7,
+        "start": 5192.606635071089,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 30,
+        "area": 7,
+        "start": 5192.606635071089,
+        "width": 655.5450236966824,
+        "count": 3
+      },
+      {
+        "wave": 31,
+        "area": 7,
+        "start": 5192.606635071089,
+        "width": 655.5450236966824,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "chromium arena stable within each belt",
+    "pass": true
+  },
+  {
+    "name": "chromium phase thresholds",
+    "pass": true,
+    "data": [
+      {
+        "fraction": 0.76,
+        "phase": 1,
+        "clones": 0,
+        "witches": 0
+      },
+      {
+        "fraction": 0.75,
+        "phase": 2,
+        "clones": 2,
+        "witches": 0,
+        "next": "clones"
+      },
+      {
+        "fraction": 0.51,
+        "phase": 2,
+        "clones": 2,
+        "witches": 0,
+        "next": "clones"
+      },
+      {
+        "fraction": 0.5,
+        "phase": 3,
+        "clones": 2,
+        "witches": 4,
+        "next": "triple"
+      },
+      {
+        "fraction": 0.26,
+        "phase": 3,
+        "clones": 2,
+        "witches": 4,
+        "next": "triple"
+      },
+      {
+        "fraction": 0.25,
+        "phase": 4,
+        "clones": 2,
+        "witches": 4,
+        "next": "meteor"
+      }
+    ]
+  },
+  {
+    "name": "chromium 2 clones and exactly 4 witches",
+    "pass": true
+  },
+  {
+    "name": "chromium fire water thunder in sequence",
+    "pass": true,
+    "data": {
+      "triple": {
+        "spells": {
+          "fire": 1,
+          "water": 1,
+          "thunder": 1
+        },
+        "hazards": [
+          "thunder",
+          "thunder"
+        ]
+      },
+      "meteors": [
+        {
+          "delay": 1.05,
+          "r": 52,
+          "damage": 42
+        },
+        {
+          "delay": 1.37,
+          "r": 52,
+          "damage": 42
+        },
+        {
+          "delay": 1.69,
+          "r": 52,
+          "damage": 42
+        },
+        {
+          "delay": 2.01,
+          "r": 52,
+          "damage": 42
+        }
+      ],
+      "summons": 4
+    }
+  },
+  {
+    "name": "chromium 4 forecast meteors",
+    "pass": true
+  },
+  {
+    "name": "chromium distinct mob attacks",
+    "pass": true,
+    "data": {
+      "fire": true,
+      "water": true,
+      "ice": true,
+      "rush": 0.27,
+      "follow": 1
+    }
+  },
+  {
+    "name": "chromium stonework starts",
+    "pass": true
+  },
+  {
+    "name": "chromium quarry pause stops hammer",
+    "pass": true
+  },
+  {
+    "name": "chromium Venus completed by input",
+    "pass": true
+  },
+  {
+    "name": "chromium quarry return title",
+    "pass": true
+  },
+  {
+    "name": "chromium runtime errors zero",
+    "pass": true,
+    "data": []
+  },
+  {
+    "name": "webkit 32 waves",
+    "pass": true
+  },
+  {
+    "name": "webkit scroll both directions",
+    "pass": true,
+    "data": {
+      "initial": 0,
+      "right": 310.44026779706394,
+      "left": 1.286613929168432
+    }
+  },
+  {
+    "name": "webkit 4 formations each area",
+    "pass": true,
+    "data": [
+      {
+        "wave": 0,
+        "area": 0,
+        "start": 0,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 1,
+        "area": 0,
+        "start": 0,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 2,
+        "area": 0,
+        "start": 0,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 3,
+        "area": 0,
+        "start": 0,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 4,
+        "area": 1,
+        "start": 741.8192589667003,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 5,
+        "area": 1,
+        "start": 741.8192589667003,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 6,
+        "area": 1,
+        "start": 741.8192589667003,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 7,
+        "area": 1,
+        "start": 741.8192589667003,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 8,
+        "area": 2,
+        "start": 1483.6385179334006,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 9,
+        "area": 2,
+        "start": 1483.6385179334006,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 10,
+        "area": 2,
+        "start": 1483.6385179334006,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 11,
+        "area": 2,
+        "start": 1483.6385179334006,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 12,
+        "area": 3,
+        "start": 2225.4577769001007,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 13,
+        "area": 3,
+        "start": 2225.4577769001007,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 14,
+        "area": 3,
+        "start": 2225.4577769001007,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 15,
+        "area": 3,
+        "start": 2225.4577769001007,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 16,
+        "area": 4,
+        "start": 2967.277035866801,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 17,
+        "area": 4,
+        "start": 2967.277035866801,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 18,
+        "area": 4,
+        "start": 2967.277035866801,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 19,
+        "area": 4,
+        "start": 2967.277035866801,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 20,
+        "area": 5,
+        "start": 3709.096294833501,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 21,
+        "area": 5,
+        "start": 3709.096294833501,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 22,
+        "area": 5,
+        "start": 3709.096294833501,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 23,
+        "area": 5,
+        "start": 3709.096294833501,
+        "width": 655.5612055984793,
+        "count": 4
+      },
+      {
+        "wave": 24,
+        "area": 6,
+        "start": 4450.915553800201,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 25,
+        "area": 6,
+        "start": 4450.915553800201,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 26,
+        "area": 6,
+        "start": 4450.915553800201,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 27,
+        "area": 6,
+        "start": 4450.915553800201,
+        "width": 655.5612055984793,
+        "count": 4
+      },
+      {
+        "wave": 28,
+        "area": 7,
+        "start": 5192.734812766902,
+        "width": 655.5612055984793,
+        "count": 2
+      },
+      {
+        "wave": 29,
+        "area": 7,
+        "start": 5192.734812766902,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 30,
+        "area": 7,
+        "start": 5192.734812766902,
+        "width": 655.5612055984793,
+        "count": 3
+      },
+      {
+        "wave": 31,
+        "area": 7,
+        "start": 5192.734812766902,
+        "width": 655.5612055984793,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "name": "webkit arena stable within each belt",
+    "pass": true
+  },
+  {
+    "name": "webkit phase thresholds",
+    "pass": true,
+    "data": [
+      {
+        "fraction": 0.76,
+        "phase": 1,
+        "clones": 0,
+        "witches": 0
+      },
+      {
+        "fraction": 0.75,
+        "phase": 2,
+        "clones": 2,
+        "witches": 0,
+        "next": "clones"
+      },
+      {
+        "fraction": 0.51,
+        "phase": 2,
+        "clones": 2,
+        "witches": 0,
+        "next": "clones"
+      },
+      {
+        "fraction": 0.5,
+        "phase": 3,
+        "clones": 2,
+        "witches": 4,
+        "next": "triple"
+      },
+      {
+        "fraction": 0.26,
+        "phase": 3,
+        "clones": 2,
+        "witches": 4,
+        "next": "triple"
+      },
+      {
+        "fraction": 0.25,
+        "phase": 4,
+        "clones": 2,
+        "witches": 4,
+        "next": "meteor"
+      }
+    ]
+  },
+  {
+    "name": "webkit 2 clones and exactly 4 witches",
+    "pass": true
+  },
+  {
+    "name": "webkit fire water thunder in sequence",
+    "pass": true,
+    "data": {
+      "triple": {
+        "spells": {
+          "fire": 1,
+          "water": 1,
+          "thunder": 1
+        },
+        "hazards": [
+          "thunder",
+          "thunder"
+        ]
+      },
+      "meteors": [
+        {
+          "delay": 1.05,
+          "r": 52,
+          "damage": 42
+        },
+        {
+          "delay": 1.37,
+          "r": 52,
+          "damage": 42
+        },
+        {
+          "delay": 1.69,
+          "r": 52,
+          "damage": 42
+        },
+        {
+          "delay": 2.01,
+          "r": 52,
+          "damage": 42
+        }
+      ],
+      "summons": 4
+    }
+  },
+  {
+    "name": "webkit 4 forecast meteors",
+    "pass": true
+  },
+  {
+    "name": "webkit distinct mob attacks",
+    "pass": true,
+    "data": {
+      "fire": true,
+      "water": true,
+      "ice": true,
+      "rush": 0.27,
+      "follow": 1
+    }
+  },
+  {
+    "name": "webkit stonework starts",
+    "pass": true
+  },
+  {
+    "name": "webkit quarry pause stops hammer",
+    "pass": true
+  },
+  {
+    "name": "webkit Venus completed by input",
+    "pass": true
+  },
+  {
+    "name": "webkit quarry return title",
+    "pass": true
+  },
+  {
+    "name": "webkit runtime errors zero",
+    "pass": true,
+    "data": []
+  }
+]
