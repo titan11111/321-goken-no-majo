@@ -1,4 +1,4 @@
-// Embedded atlases are decoded once; no network asset request during play.
+// WebP atlases load from assets/ and decode once before they are first drawn.
 // Silhouette bounds were previously measured at every launch (getImageData + flood fill,
 // a multi-hundred-ms main-thread freeze on phones). They are now baked at build time into
 // art-baked.json (dev tool: _playtest/bake-art.mjs) so launch only decodes the images.
