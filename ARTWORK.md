@@ -78,3 +78,19 @@ Repack this SAME nine-sprite sheet into a strict 3x3 equal grid on a square tran
 ```text
 Create FOUR NEW environments matching reference high detail hand-painted dark fantasy belt scrolling beat-em-up backgrounds. EXACT 2x2 atlas, 1536x1024 landscape. Each quadrant a complete scene with no borders, UI, labels or text. Same side-on slightly elevated arcade fighting camera as reference, horizon at 57% of each quadrant, unobstructed horizontal walkable stone foreground occupying bottom 43%. Foreground must be empty so fighters can be drawn later. Top left: PETRIFIED TOWN at dusk, abandoned cobblestone market street, old half timbered houses, broken stall awnings, 3 SMALL stone statues of townspeople in natural daily poses only at rear edges, cold ash, distant castle ominous against amber-gray sky. Top right: UNDERGROUND AQUEDUCT, colossal arches under a castle, blue-green canal behind foreground dry broad stone towpath, wet reflections, chains, water dripping in deep background, turquoise mist, floor empty. Bottom left: MOONLIT GARDEN, castle garden terrace with white roses and overgrown hedges behind stone railing, giant pale moon, gothic spires, violet blue night, silver light pools, broad dry stone terrace empty in foreground. Bottom right: FORBIDDEN LIBRARY, towering ancient bookshelves behind broad empty stone floor, floating books confined to far background, brass astrolabe, warm copper lamps and emerald ward lights, imposing arched vault, clear combat floor. Distinct colour palettes and architecture per quadrant. No alive people, no fighters, no enemies, no monsters, no foreground furniture. Do not repeat reference locations; these are new locations for same world. Painterly detailed premium game art.
 ```
+
+
+## 2026-10-12 タイトル画面のキービジュアル
+
+`assets/title-art.webp`（1586×992、約353 KiB）を追加し、タイトル画面の幾何学的な仮背景から差し替えた。Built-in image_genで制作し、暗い城・石工ガルド・紅蓮の魔女・左側のタイトル用余白を一枚にまとめた。作品の既存色である炭色・炎色・古い金色を軸にし、タイトル文字も同じ色へ揃えた。画像データは `index.html` に埋め込み、単体HTMLでも表示する。
+
+主人公・敵・背景・歩行・エンディングは既存の透過スプライトシート／画像を継続使用する。火花、衝撃波、魔法弾など時間や座標で形が変わる演出は、絵へ固定すると動きが失われるためCanvas描画のままにする。
+
+巨人草の固定アイコンも `assets/giant-herb.webp` の透過イラストへ置き換えた。周囲の発光だけは使用中の演出としてCanvasで続ける。
+
+
+## 2026-10-12 二面背景と石工モード彫像
+
+`assets/stage2-atlas.webp` は雷鳴の見張塔・硝子の炉心・月蝕の聖堂・呪核の間を2×2にまとめた背景。既存の背景切り出し処理で各エリアに割り当て、暗い石・青い嵐・炉の炎・紫の呪い光を共通の色調にした。
+
+`assets/venus-realistic.webp` は石工モードのビーナス用に生成した、全身をローブで覆った大理石彫像。3×3の採掘演出は維持し、彫像の面だけ実写風画像へ差し替えた。画像データは単体HTMLでも動くよう `index.html` に埋め込んでいる。
