@@ -45,12 +45,8 @@ Bottom right: demon king's throne chamber at the heart of a volcanic citadel, bl
 Every quadrant must be a complete attractive scene edge to edge with continuous level floor, no cropped interface. Detail suitable for a released game, not a flat schematic.
 ```
 
-## dawn.webp（エンディング背景・2026-10-11）
-組み込み image_gen。1280×720 → WebP 品質84（約200KB）。人物なし。道の位置はコード側 `END_PATH` に正規化座標で持つ（絵を差し替えるなら道の座標を取り直す）。
-
-```text
-Cinematic ending backdrop ... SUNRISE after the demon king's defeat: broken dark castle far left, huge golden sun breaking over the horizon with god rays, warm village rooftops and a stone bridge in the middle distance, cherry petals, a clear empty weathered stone road filling the bottom 40%. NO characters, NO text, NO UI.
-```
+## dawn.webp（エンディング背景・2026-10-12）
+1280×720 → WebP 品質84（約210KB）。呪いが解けた街の夜明け。左奥は崩れた魔城、中景で石化が解けた人々が最初の石を積む。手前約40%は空の石畳（ガルドはコード側の歩行で重ねる）。道の位置は `END_PATH`。文字・UIなし。キャンバス生成で上書きしない。
 
 ## hero-walk.webp（歩行8コマ・2026-10-11改修）
 
@@ -91,6 +87,6 @@ Create FOUR NEW environments matching reference high detail hand-painted dark fa
 
 ## 2026-10-12 二面背景と石工モード彫像
 
-`assets/stage2-atlas.webp` は雷鳴の見張塔・硝子の炉心・月蝕の聖堂・呪核の間を2×2にまとめた背景。既存の背景切り出し処理で各エリアに割り当て、暗い石・青い嵐・炉の炎・紫の呪い光を共通の色調にした。
+`assets/stage2-atlas.webp` は雷鳴の見張塔・硝子の炉心・月蝕の聖堂・呪核の間を2×2にまとめた背景。2026-10-12に床を手前43%へ取り直し。初版は城・炉・聖堂・呪核が空中の遠景で、歩ける石畳が画面下端の細い帯しかなく、キャラが空中に立って見えた。再生成は一面の床カメラ（地平線約57%、手前の石畳が画面下約43%）に合わせ、建物は奥の背景に置いた。
 
 `assets/venus-realistic.webp` は石工モードのビーナス用に生成した、全身をローブで覆った大理石彫像。3×3の採掘演出は維持し、彫像の面だけ実写風画像へ差し替えた。画像データは単体HTMLでも動くよう `index.html` に埋め込んでいる。
