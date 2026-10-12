@@ -21,6 +21,11 @@ for(const [name,engine,viewport] of [['chromium',chromium,{width:390,height:844}
  await p.waitForTimeout(250);await shot('grow-mid');await p.waitForTimeout(900);let s=await snap(p);check(name+' giant active 30s',s.giant>29&&s.giant<=30,{giant:s.giant});
  await p.evaluate(()=>{for(const e of __iron.test.state.enemies){e.cool=99;e.stun=99}});await shot('giant');
  const refl=await p.evaluate(()=>{const T=__iron.test,S=T.state;T.resetEnemies();T.enemy('frost',S.p.x+900,.2);const hp=S.p.hp,r0=S.stats.reflections;S.shots=[];S.p.inv=0;T.shot({x:S.p.x+60});for(let i=0;i<40;i++)T.step(1/120);return{hp,after:S.p.hp,reflections:S.stats.reflections-r0,back:S.shots.filter(x=>x.reflected).map(x=>x.vx)}});check(name+' giant reflects magic',refl.after===refl.hp&&refl.reflections===1&&refl.back[0]>0,refl);
+ check(name+' giant move is heavy',(await snap(p)).giantMove<=.45,{giantMove:(await snap(p)).giantMove});
+ const bounced=await p.evaluate(()=>{const T=__iron.test,S=T.state;T.resetEnemies();S.p.giant=0;S.p.inv=9;const id=T.enemy('guard',S.p.x+90,S.p.z),e=S.enemies.find(n=>n.id===id);e.shield=1;e.cool=99;e.stun=0;S.shots=[{id:99,x:e.x-30,z:e.z,vx:420,vz:0,life:3,col:'#ffac72',r:10,reflected:true,dmg:55,grade:1}];for(let i=0;i<50;i++)T.step(1/120);const s=S.shots[0];return{hp:e.hp,max:e.maxHP,vx:s&&s.vx,back:!!(s&&s.vx<0),col:s&&s.col,guardBack:!!(s&&s.guardBack)}});
+ check(name+' shield soldier returns approaching magic',bounced.back&&bounced.guardBack&&bounced.hp===bounced.max,bounced);
+ await p.evaluate(()=>{__iron.test.state.p.giant=30;__iron.test.state.p.inv=1});
+
  const haz=await p.evaluate(()=>{const S=__iron.test.state,hp=S.p.hp;S.hazards=[{x:S.p.x,z:S.p.z,kind:'thunder',col:'#ffe18a',t:0,delay:.05,r:60,damage:30}];S.p.inv=0;for(let i=0;i<30;i++)__iron.test.step(1/120);return{hp,after:S.p.hp}});check(name+' giant nullifies ground magic',haz.after===haz.hp,haz);
  await p.evaluate(()=>{__iron.test.state.p.giant=.02});await p.waitForTimeout(150);s=await snap(p);check(name+' shrink animation after timeout',s.giant===0&&await p.evaluate(()=>!!__iron.test.state.growFx&&!__iron.test.state.growFx.grow));await p.waitForTimeout(1100);check(name+' back to normal size',await p.evaluate(()=>!__iron.test.state.growFx));
  // Enemy defence +50%.

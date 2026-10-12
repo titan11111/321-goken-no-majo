@@ -54,7 +54,7 @@
       ],
       "hits": 7,
       "progress": 0.35555555555555557,
-      "seconds": 2.2834999999999996,
+      "seconds": 2.399599999999998,
       "over": 8,
       "moves": [
         "左ジャブ",
@@ -82,7 +82,7 @@
       ],
       "hits": 18,
       "progress": 1,
-      "seconds": 6.315800000000015,
+      "seconds": 6.450000000000012,
       "over": 72,
       "moves": [
         "左ジャブ",
@@ -116,7 +116,7 @@
         8
       ],
       "herbs": 1,
-      "seconds": 6.315800000000015,
+      "seconds": 6.450000000000012,
       "over": 72,
       "moves": [
         "左ジャブ",
@@ -141,7 +141,7 @@
     "name": "chromium giant active 30s",
     "pass": true,
     "data": {
-      "giant": 29.850100000000015
+      "giant": 29.816699999999997
     }
   },
   {
@@ -154,6 +154,25 @@
       "back": [
         620
       ]
+    }
+  },
+  {
+    "name": "chromium giant move is heavy",
+    "pass": true,
+    "data": {
+      "giantMove": 0.42
+    }
+  },
+  {
+    "name": "chromium shield soldier returns approaching magic",
+    "pass": true,
+    "data": {
+      "hp": 112,
+      "max": 112,
+      "vx": -399,
+      "back": true,
+      "col": "#98e7da",
+      "guardBack": true
     }
   },
   {
@@ -263,7 +282,7 @@
       ],
       "hits": 7,
       "progress": 0.35555555555555557,
-      "seconds": 2.1889999999999974,
+      "seconds": 2.2049999999999965,
       "over": 8,
       "moves": [
         "左ジャブ",
@@ -291,7 +310,7 @@
       ],
       "hits": 18,
       "progress": 1,
-      "seconds": 6.206000000000009,
+      "seconds": 6.221000000000006,
       "over": 72,
       "moves": [
         "左ジャブ",
@@ -325,7 +344,7 @@
         8
       ],
       "herbs": 1,
-      "seconds": 6.206000000000009,
+      "seconds": 6.221000000000006,
       "over": 72,
       "moves": [
         "左ジャブ",
@@ -350,7 +369,7 @@
     "name": "webkit giant active 30s",
     "pass": true,
     "data": {
-      "giant": 29.849999999999998
+      "giant": 29.850000000000005
     }
   },
   {
@@ -363,6 +382,25 @@
       "back": [
         620
       ]
+    }
+  },
+  {
+    "name": "webkit giant move is heavy",
+    "pass": true,
+    "data": {
+      "giantMove": 0.42
+    }
+  },
+  {
+    "name": "webkit shield soldier returns approaching magic",
+    "pass": true,
+    "data": {
+      "hp": 112,
+      "max": 112,
+      "vx": -399,
+      "back": true,
+      "col": "#98e7da",
+      "guardBack": true
     }
   },
   {
@@ -472,7 +510,7 @@
       ],
       "hits": 7,
       "progress": 0.35555555555555557,
-      "seconds": 2.3333999999999984,
+      "seconds": 2.3331999999999984,
       "over": 8,
       "moves": [
         "左ジャブ",
@@ -500,7 +538,7 @@
       ],
       "hits": 18,
       "progress": 1,
-      "seconds": 6.384300000000016,
+      "seconds": 6.3495000000000115,
       "over": 72,
       "moves": [
         "左ジャブ",
@@ -534,7 +572,7 @@
         8
       ],
       "herbs": 1,
-      "seconds": 6.384300000000016,
+      "seconds": 6.3495000000000115,
       "over": 72,
       "moves": [
         "左ジャブ",
@@ -559,7 +597,7 @@
     "name": "chromium-land giant active 30s",
     "pass": true,
     "data": {
-      "giant": 29.81740000000003
+      "giant": 29.833400000000008
     }
   },
   {
@@ -572,6 +610,25 @@
       "back": [
         620
       ]
+    }
+  },
+  {
+    "name": "chromium-land giant move is heavy",
+    "pass": true,
+    "data": {
+      "giantMove": 0.42
+    }
+  },
+  {
+    "name": "chromium-land shield soldier returns approaching magic",
+    "pass": true,
+    "data": {
+      "hp": 112,
+      "max": 112,
+      "vx": -399,
+      "back": true,
+      "col": "#98e7da",
+      "guardBack": true
     }
   },
   {

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "title has hook only",
+    "pass": true,
+    "data": "闘え！\n石工ガルド\n闘いを始める\n石工の仕事\n遊び方\n設定"
+  },
+  {
+    "name": "giant move 0.42",
+    "pass": true,
+    "data": {
+      "g": 0.42
+    }
+  },
+  {
+    "name": "guard returns magic",
+    "pass": true,
+    "data": {
+      "hp": 112,
+      "max": 112,
+      "vx": -399,
+      "back": true,
+      "guardBack": true
+    }
+  },
+  {
+    "name": "guard does not bounce own outgoing shot",
+    "pass": true,
+    "data": {
+      "stillOut": true,
+      "vx": -220
+    }
+  },
+  {
+    "name": "no runtime errors",
+    "pass": true,
+    "data": []
+  }
+]
